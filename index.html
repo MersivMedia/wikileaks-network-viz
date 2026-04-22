@@ -158,6 +158,7 @@
     <div class="btn-group">
       <button class="btn active" onclick="loadDataset('cablegate')">Cablegate</button>
       <button class="btn" onclick="loadDataset('dnc')">DNC Emails</button>
+      <button class="btn" onclick="loadDataset('vault7')">CIA Vault7</button>
     </div>
     
     <h2>View Mode</h2>
@@ -214,6 +215,28 @@
           return '#44ff88';
         },
         link: () => 'rgba(100,200,255,0.2)'
+      },
+      vault7: {
+        node: (node) => {
+          const type = node.type || '';
+          if (type === 'project') {
+            const cat = node.category || '';
+            if (cat === 'framework' || cat === 'infrastructure') return '#ff4444';
+            if (cat === 'implant') return '#ff6600';
+            if (cat === 'exploit') return '#ffaa00';
+            return '#00ff88';
+          }
+          if (type === 'organization') return '#00aaff';
+          if (type === 'user') return '#aa66ff';
+          return '#44ff88';
+        },
+        link: (link) => {
+          const type = link.type || '';
+          if (type === 'developed_by') return 'rgba(0,170,255,0.5)';
+          if (type === 'related_to') return 'rgba(255,102,0,0.4)';
+          if (type === 'contributed_to') return 'rgba(170,102,255,0.3)';
+          return 'rgba(68,255,136,0.2)';
+        }
       }
     };
     
@@ -243,6 +266,25 @@
             <div class="legend-item"><div class="legend-color" style="background:#ff4444"></div> High (1000+ refs)</div>
             <div class="legend-item"><div class="legend-color" style="background:#ffaa00"></div> Medium (500+)</div>
             <div class="legend-item"><div class="legend-color" style="background:#44ff88"></div> Normal</div>
+          `;
+        } else if (name === 'vault7') {
+          const response = await fetch('vault7_network.json');
+          const vault7Data = await response.json();
+          graphData = { nodes: vault7Data.nodes, links: vault7Data.links };
+          detailedData = vault7Data;
+          
+          document.getElementById('stats').innerHTML = `
+            <div>Nodes: <span>${vault7Data.nodes.length}</span> (projects/orgs/users)</div>
+            <div>Links: <span>${vault7Data.links.length}</span> relationships</div>
+            <div>Dataset: <span>CIA Hacking Tools (2017)</span></div>
+          `;
+          
+          document.getElementById('legend').innerHTML = `
+            <strong>Node Types</strong>
+            <div class="legend-item"><div class="legend-color" style="background:#ff4444"></div> Frameworks</div>
+            <div class="legend-item"><div class="legend-color" style="background:#ff6600"></div> Implants</div>
+            <div class="legend-item"><div class="legend-color" style="background:#00aaff"></div> Organizations</div>
+            <div class="legend-item"><div class="legend-color" style="background:#aa66ff"></div> Users</div>
           `;
         } else {
           const response = await fetch('dnc_graph.json');
@@ -295,7 +337,7 @@
         .onNodeClick(node => showNodeInfo(node))
         .onBackgroundClick(() => closeInfo());
         
-      if (currentDataset === 'cablegate') {
+      if (currentDataset === 'cablegate' || currentDataset === 'vault7') {
         Graph
           .linkDirectionalParticles(2)
           .linkDirectionalParticleWidth(1.5)
@@ -335,6 +377,42 @@
         
         docLink.href = detailed?.search_url || `https://wikileaks.org/plusd/?qproject[]=cg&qforigin[]=${node.id}#result`;
         docLink.textContent = '🔍 Search All ' + (node.name || node.id) + ' Cables';
+      } else if (currentDataset === 'vault7') {
+        // CIA Vault7
+        title.textContent = node.id;
+        
+        const connections = graphData.links.filter(l => 
+          l.source === node.id || l.target === node.id ||
+          l.source.id === node.id || l.target.id === node.id
+        ).length;
+        
+        if (node.type === 'project') {
+          content.innerHTML = `
+            <strong>Type:</strong> ${node.category || 'Unknown'}<br>
+            <strong>Division:</strong> ${node.division || 'Unknown'}<br>
+            <strong>Targets:</strong> ${(node.targets || []).join(', ') || 'Unknown'}<br>
+            <strong>Description:</strong> ${node.description || 'No description'}<br>
+            <strong>Mentions:</strong> ${node.mentions || 0}
+          `;
+          docLink.href = `https://wikileaks.org/ciav7p1/?q=${encodeURIComponent(node.id)}`;
+          docLink.textContent = '🔍 Search ' + node.id + ' on WikiLeaks Vault7';
+        } else if (node.type === 'organization') {
+          content.innerHTML = `
+            <strong>Full Name:</strong> ${node.full_name || node.id}<br>
+            <strong>Type:</strong> ${node.org_type || 'CIA Division'}<br>
+            <strong>Connections:</strong> ${connections} links
+          `;
+          docLink.href = `https://wikileaks.org/ciav7p1/?q=${encodeURIComponent(node.id)}`;
+          docLink.textContent = '🔍 Search ' + node.id + ' on WikiLeaks';
+        } else {
+          content.innerHTML = `
+            <strong>Type:</strong> User/Developer<br>
+            <strong>Activity:</strong> ${node.file_count || 0} files<br>
+            <strong>Connections:</strong> ${connections} links
+          `;
+          docLink.href = `https://wikileaks.org/ciav7p1/`;
+          docLink.textContent = '🔍 Browse Vault7 on WikiLeaks';
+        }
       } else {
         // DNC emails
         const email = node.name || node.id;

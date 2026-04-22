@@ -1,0 +1,731 @@
+{
+  "metadata": {
+    "title": "CIA Vault7 Network Visualization",
+    "source": "WikiLeaks Vault7 Leak (2017)",
+    "extraction_date": "2025-01-20",
+    "total_files_processed": 1047,
+    "description": "Network graph of CIA hacking tools, organizations, and personnel relationships"
+  },
+  "nodes": [
+    {
+      "id": "HIVE",
+      "type": "project",
+      "category": "infrastructure",
+      "description": "Multi-platform malware redirector/C2 infrastructure used for remote network operations",
+      "targets": ["Windows", "Linux", "iOS", "MikroTik", "Solaris", "macOS"],
+      "division": "EDG",
+      "mentions": 50,
+      "status": "active"
+    },
+    {
+      "id": "RoidRage",
+      "type": "project",
+      "category": "implant",
+      "description": "Android malware implant deployed via AngerManagement framework for mobile device exploitation",
+      "targets": ["Android", "Samsung"],
+      "division": "MDB",
+      "mentions": 14,
+      "status": "active"
+    },
+    {
+      "id": "NightSkies",
+      "type": "project",
+      "category": "implant",
+      "description": "iOS implant/beacon for Apple mobile devices - iPhone and iPad surveillance",
+      "targets": ["iOS", "iPhone", "iPad", "macOS"],
+      "division": "MDB",
+      "mentions": 11,
+      "status": "active"
+    },
+    {
+      "id": "Cutthroat",
+      "type": "project",
+      "category": "infrastructure",
+      "description": "Counter-Terrorism (CT) session handler for network device implant communications",
+      "targets": ["Linux", "Ubuntu", "Cisco", "Windows"],
+      "division": "NDB",
+      "mentions": 11,
+      "status": "active"
+    },
+    {
+      "id": "Grasshopper",
+      "type": "project",
+      "category": "framework",
+      "description": "Windows installer builder framework for custom payload deployment with PSP evasion",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 11,
+      "status": "active"
+    },
+    {
+      "id": "UMBRAGE",
+      "type": "project",
+      "category": "library",
+      "description": "Component library of attack techniques borrowed from in-the-wild malware for code reuse",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 10,
+      "status": "active"
+    },
+    {
+      "id": "Marble",
+      "type": "project",
+      "category": "obfuscation",
+      "description": "String obfuscation framework to hamper forensic analysis and attribution of CIA malware",
+      "targets": ["Windows", "Linux"],
+      "division": "EDG",
+      "mentions": 9,
+      "status": "active"
+    },
+    {
+      "id": "Weeping Angel",
+      "type": "project",
+      "category": "implant",
+      "description": "Samsung Smart TV surveillance tool developed with MI5 - fake-off mode for audio capture",
+      "targets": ["Samsung", "Linux"],
+      "division": "EDG",
+      "mentions": 8,
+      "collaborators": ["MI5", "GCHQ"],
+      "status": "active"
+    },
+    {
+      "id": "Assassin",
+      "type": "project",
+      "category": "implant",
+      "description": "Windows automated implant with modular Gremlin plugin architecture",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 8,
+      "status": "active"
+    },
+    {
+      "id": "McNugget",
+      "type": "project",
+      "category": "implant",
+      "description": "iOS exploit/implant for Apple devices - related to NightSkies project",
+      "targets": ["iOS", "iPhone", "iPad", "macOS"],
+      "division": "MDB",
+      "mentions": 8,
+      "status": "active"
+    },
+    {
+      "id": "Caterpillar",
+      "type": "project",
+      "category": "framework",
+      "description": "Build system and installer framework component",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 6,
+      "status": "active"
+    },
+    {
+      "id": "Pterodactyl",
+      "type": "project",
+      "category": "implant",
+      "description": "Linux/embedded device implant for persistent access",
+      "targets": ["Linux", "Ubuntu"],
+      "division": "EDB",
+      "mentions": 5,
+      "status": "active"
+    },
+    {
+      "id": "Fine Dining",
+      "type": "project",
+      "category": "framework",
+      "description": "Case Officer toolset for generating portable DLL infectors and deployment packages",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 5,
+      "status": "active"
+    },
+    {
+      "id": "Giraffe",
+      "type": "project",
+      "category": "implant",
+      "description": "Windows/iOS implant component",
+      "targets": ["Windows", "iOS"],
+      "division": "MDB",
+      "mentions": 5,
+      "status": "active"
+    },
+    {
+      "id": "AfterMidnight",
+      "type": "project",
+      "category": "framework",
+      "description": "Windows implant framework with Gremlin modular payload architecture",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 5,
+      "status": "active"
+    },
+    {
+      "id": "Fight Club",
+      "type": "project",
+      "category": "framework",
+      "description": "Implant framework related to HIVE infrastructure",
+      "targets": ["Windows", "Linux"],
+      "division": "EDG",
+      "mentions": 5,
+      "status": "active"
+    },
+    {
+      "id": "Swindle",
+      "type": "project",
+      "category": "implant",
+      "description": "Network device implant for embedded systems",
+      "targets": ["Linux", "Ubuntu", "CentOS"],
+      "division": "NDB",
+      "mentions": 4,
+      "status": "active"
+    },
+    {
+      "id": "DerStarke",
+      "type": "project",
+      "category": "implant",
+      "description": "macOS/OSX implant with Triton component for Apple desktop surveillance",
+      "targets": ["macOS", "OSX"],
+      "division": "MDB",
+      "mentions": 4,
+      "status": "active"
+    },
+    {
+      "id": "Philosoraptor",
+      "type": "project",
+      "category": "implant",
+      "description": "Multi-platform implant component",
+      "targets": ["Linux", "Windows"],
+      "division": "AED",
+      "mentions": 4,
+      "status": "active"
+    },
+    {
+      "id": "Sparrowhawk",
+      "type": "project",
+      "category": "implant",
+      "description": "Solaris/SPARC implant for Unix server exploitation (also SparrowHawk, Sparrow)",
+      "targets": ["Solaris", "Linux"],
+      "division": "AED",
+      "mentions": 12,
+      "status": "active"
+    },
+    {
+      "id": "ELSA",
+      "type": "project",
+      "category": "geolocation",
+      "description": "WiFi geolocation tool for tracking target location via wireless networks",
+      "targets": ["Windows"],
+      "division": "AED",
+      "mentions": 3,
+      "status": "active"
+    },
+    {
+      "id": "Medusa",
+      "type": "project",
+      "category": "implant",
+      "description": "Multi-headed implant framework",
+      "targets": ["Windows", "Linux"],
+      "division": "OSB",
+      "mentions": 3,
+      "status": "active"
+    },
+    {
+      "id": "Brutal Kangaroo",
+      "type": "project",
+      "category": "airgap",
+      "description": "Air-gapped network penetration tool using USB drives and NTFS alternate data streams",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 3,
+      "status": "active"
+    },
+    {
+      "id": "Bartender",
+      "type": "project",
+      "category": "implant",
+      "description": "Windows implant component",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 3,
+      "status": "active"
+    },
+    {
+      "id": "ShoulderSurfer",
+      "type": "project",
+      "category": "collection",
+      "description": "Keystroke and screen capture tool",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 2,
+      "status": "active"
+    },
+    {
+      "id": "Triton",
+      "type": "project",
+      "category": "implant",
+      "description": "macOS implant component related to DerStarke",
+      "targets": ["macOS", "OSX"],
+      "division": "MDB",
+      "mentions": 2,
+      "status": "active"
+    },
+    {
+      "id": "Cherry Blossom",
+      "type": "project",
+      "category": "router",
+      "description": "Wireless router firmware implant for network monitoring",
+      "targets": ["MikroTik", "Cisco"],
+      "division": "NDB",
+      "mentions": 1,
+      "status": "active"
+    },
+    {
+      "id": "YarnBall",
+      "type": "project",
+      "category": "implant",
+      "description": "Implant delivery mechanism",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 1,
+      "status": "active"
+    },
+    {
+      "id": "SeaPea",
+      "type": "project",
+      "category": "rootkit",
+      "description": "macOS rootkit for persistent access",
+      "targets": ["macOS", "OSX"],
+      "division": "MDB",
+      "mentions": 1,
+      "status": "active"
+    },
+    {
+      "id": "ExpressLane",
+      "type": "project",
+      "category": "collection",
+      "description": "Covert data collection tool for OTS biometric systems",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 1,
+      "status": "active"
+    },
+    {
+      "id": "Gyrfalcon",
+      "type": "project",
+      "category": "implant",
+      "description": "SSH credential collection implant",
+      "targets": ["Linux"],
+      "division": "AED",
+      "mentions": 1,
+      "status": "active"
+    },
+    {
+      "id": "Archimedes",
+      "type": "project",
+      "category": "network",
+      "description": "Man-in-the-middle attack tool for LAN exploitation",
+      "targets": ["Linux", "Windows"],
+      "division": "NDB",
+      "mentions": 1,
+      "status": "active"
+    },
+    {
+      "id": "Aeris",
+      "type": "project",
+      "category": "implant",
+      "description": "POSIX-based implant for portable operating system access",
+      "targets": ["Linux", "Solaris", "FreeBSD"],
+      "division": "AED",
+      "mentions": 1,
+      "status": "active"
+    },
+    {
+      "id": "AngerManagement",
+      "type": "project",
+      "category": "framework",
+      "description": "Android exploitation framework integrating exploits with RoidRage implant via Mission Control",
+      "targets": ["Android"],
+      "division": "MDB",
+      "mentions": 8,
+      "status": "active"
+    },
+    {
+      "id": "HammerDrill",
+      "type": "project",
+      "category": "airgap",
+      "description": "CD/DVD data collection tool for air-gapped systems",
+      "targets": ["Windows"],
+      "division": "OSB",
+      "mentions": 3,
+      "status": "active"
+    },
+    {
+      "id": "OSB",
+      "type": "organization",
+      "full_name": "Operational Support Branch",
+      "parent": "CIA/EDG",
+      "description": "Develops Windows implants, frameworks, and component libraries",
+      "mentions": 61
+    },
+    {
+      "id": "EDG",
+      "type": "organization",
+      "full_name": "Engineering Development Group",
+      "parent": "CIA/CCI",
+      "description": "Primary CIA cyber weapons development group - parent of all development branches",
+      "mentions": 54
+    },
+    {
+      "id": "AED",
+      "type": "organization",
+      "full_name": "Applied Engineering Division",
+      "parent": "CIA/EDG",
+      "description": "Develops cross-platform and Unix/Linux implants and tools",
+      "mentions": 39
+    },
+    {
+      "id": "MDB",
+      "type": "organization",
+      "full_name": "Mobile Development Branch",
+      "parent": "CIA/EDG",
+      "description": "Develops iOS, Android, and mobile device implants and exploits",
+      "mentions": 39
+    },
+    {
+      "id": "NDB",
+      "type": "organization",
+      "full_name": "Network Devices Branch",
+      "parent": "CIA/EDG",
+      "description": "Develops implants for routers, switches, and network infrastructure",
+      "mentions": 28
+    },
+    {
+      "id": "EDB",
+      "type": "organization",
+      "full_name": "Embedded Devices Branch",
+      "parent": "CIA/EDG",
+      "description": "Develops implants for embedded systems and IoT devices",
+      "mentions": 23
+    },
+    {
+      "id": "NSA",
+      "type": "organization",
+      "full_name": "National Security Agency",
+      "parent": "US Government",
+      "description": "Signals intelligence agency - collaborates with CIA on cyber operations",
+      "mentions": 21
+    },
+    {
+      "id": "IOC",
+      "type": "organization",
+      "full_name": "Information Operations Center",
+      "parent": "CIA",
+      "description": "CIA center overseeing cyber operations and tool deployment",
+      "mentions": 19
+    },
+    {
+      "id": "RDB",
+      "type": "organization",
+      "full_name": "Remote Development Branch",
+      "parent": "CIA/EDG",
+      "description": "Develops remote access and covert communication tools",
+      "mentions": 14
+    },
+    {
+      "id": "AIB",
+      "type": "organization",
+      "full_name": "Automated Implant Branch",
+      "parent": "CIA/EDG",
+      "description": "Develops automated implant deployment and management systems",
+      "mentions": 13
+    },
+    {
+      "id": "GCHQ",
+      "type": "organization",
+      "full_name": "Government Communications Headquarters",
+      "parent": "UK Government",
+      "description": "British signals intelligence agency - Five Eyes partner",
+      "mentions": 9
+    },
+    {
+      "id": "FBI",
+      "type": "organization",
+      "full_name": "Federal Bureau of Investigation",
+      "parent": "US Government",
+      "description": "US law enforcement - receives CIA cyber tools for domestic operations",
+      "mentions": 9
+    },
+    {
+      "id": "MI5",
+      "type": "organization",
+      "full_name": "Security Service",
+      "parent": "UK Government",
+      "description": "British domestic intelligence - collaborated on Weeping Angel",
+      "mentions": 7
+    },
+    {
+      "id": "CCI",
+      "type": "organization",
+      "full_name": "Center for Cyber Intelligence",
+      "parent": "CIA",
+      "description": "CIA cyber intelligence center - parent organization of EDG",
+      "mentions": 5
+    },
+    {
+      "id": "COG",
+      "type": "organization",
+      "full_name": "Computer Operations Group",
+      "parent": "CIA",
+      "description": "Operational group that deploys cyber tools in field operations",
+      "mentions": 3
+    },
+    {
+      "id": "User #71473",
+      "type": "user",
+      "activity_level": "very_high",
+      "files_touched": 98,
+      "divisions": ["OSB", "EDG", "AED"],
+      "projects": ["Grasshopper", "Marble", "UMBRAGE", "Fine Dining"],
+      "role": "Senior Developer / Acting Chief"
+    },
+    {
+      "id": "User #524297",
+      "type": "user",
+      "activity_level": "very_high",
+      "files_touched": 116,
+      "divisions": ["OSB", "EDG"],
+      "projects": ["Fine Dining", "UMBRAGE", "Grasshopper"],
+      "role": "Lead Developer"
+    },
+    {
+      "id": "User #71467",
+      "type": "user",
+      "activity_level": "high",
+      "files_touched": 36,
+      "divisions": ["NDB", "EDB"],
+      "projects": ["Cutthroat", "HIVE", "Swindle"],
+      "role": "Network Devices Developer"
+    },
+    {
+      "id": "User #3375506",
+      "type": "user",
+      "activity_level": "high",
+      "files_touched": 14,
+      "divisions": ["OSB"],
+      "projects": ["Grasshopper", "Assassin", "AfterMidnight"],
+      "role": "Windows Developer"
+    },
+    {
+      "id": "User #71384",
+      "type": "user",
+      "activity_level": "high",
+      "files_touched": 12,
+      "divisions": ["EDB", "RDB"],
+      "projects": ["HIVE", "Pterodactyl"],
+      "role": "Embedded Developer"
+    },
+    {
+      "id": "User #71475",
+      "type": "user",
+      "activity_level": "medium",
+      "files_touched": 8,
+      "divisions": ["MDB"],
+      "projects": ["RoidRage", "NightSkies"],
+      "role": "Mobile Developer"
+    },
+    {
+      "id": "User #71529",
+      "type": "user",
+      "activity_level": "medium",
+      "files_touched": 7,
+      "divisions": ["OSB", "AED"],
+      "projects": ["UMBRAGE", "Sparrowhawk"],
+      "role": "Developer"
+    },
+    {
+      "id": "User #1179751",
+      "type": "user",
+      "activity_level": "medium",
+      "files_touched": 6,
+      "divisions": ["OSB"],
+      "projects": ["Grasshopper", "Fine Dining"],
+      "role": "OSB Lead"
+    },
+    {
+      "id": "User #20251227",
+      "type": "user",
+      "activity_level": "medium",
+      "files_touched": 5,
+      "divisions": ["OSB"],
+      "projects": ["UMBRAGE"],
+      "role": "Component Library Developer"
+    },
+    {
+      "id": "User #4849738",
+      "type": "user",
+      "activity_level": "medium",
+      "files_touched": 4,
+      "divisions": ["OSB"],
+      "projects": ["Grasshopper"],
+      "role": "Developer"
+    }
+  ],
+  "links": [
+    {"source": "HIVE", "target": "EDG", "type": "developed_by", "weight": 50},
+    {"source": "HIVE", "target": "RDB", "type": "maintained_by", "weight": 6},
+    {"source": "HIVE", "target": "Cutthroat", "type": "related_to", "weight": 3},
+    {"source": "HIVE", "target": "Fight Club", "type": "related_to", "weight": 2},
+    
+    {"source": "RoidRage", "target": "MDB", "type": "developed_by", "weight": 14},
+    {"source": "RoidRage", "target": "AngerManagement", "type": "deployed_via", "weight": 10},
+    {"source": "RoidRage", "target": "NightSkies", "type": "related_to", "weight": 2},
+    
+    {"source": "NightSkies", "target": "MDB", "type": "developed_by", "weight": 11},
+    {"source": "NightSkies", "target": "McNugget", "type": "related_to", "weight": 3},
+    
+    {"source": "Cutthroat", "target": "NDB", "type": "developed_by", "weight": 11},
+    {"source": "Cutthroat", "target": "HIVE", "type": "communicates_with", "weight": 3},
+    
+    {"source": "Grasshopper", "target": "OSB", "type": "developed_by", "weight": 11},
+    {"source": "Grasshopper", "target": "Assassin", "type": "related_to", "weight": 3},
+    {"source": "Grasshopper", "target": "IOC", "type": "deployed_by", "weight": 2},
+    
+    {"source": "UMBRAGE", "target": "OSB", "type": "developed_by", "weight": 10},
+    {"source": "UMBRAGE", "target": "Grasshopper", "type": "provides_components_to", "weight": 5},
+    
+    {"source": "Marble", "target": "EDG", "type": "developed_by", "weight": 9},
+    
+    {"source": "Weeping Angel", "target": "EDG", "type": "developed_by", "weight": 8},
+    {"source": "Weeping Angel", "target": "MI5", "type": "collaboration", "weight": 5},
+    {"source": "Weeping Angel", "target": "IOC", "type": "requested_by", "weight": 2},
+    
+    {"source": "Assassin", "target": "OSB", "type": "developed_by", "weight": 8},
+    {"source": "Assassin", "target": "Grasshopper", "type": "related_to", "weight": 3},
+    {"source": "Assassin", "target": "IOC", "type": "deployed_by", "weight": 2},
+    
+    {"source": "McNugget", "target": "MDB", "type": "developed_by", "weight": 8},
+    {"source": "McNugget", "target": "NightSkies", "type": "related_to", "weight": 3},
+    
+    {"source": "AngerManagement", "target": "MDB", "type": "developed_by", "weight": 8},
+    
+    {"source": "Pterodactyl", "target": "EDB", "type": "developed_by", "weight": 5},
+    
+    {"source": "Fine Dining", "target": "OSB", "type": "developed_by", "weight": 5},
+    
+    {"source": "AfterMidnight", "target": "OSB", "type": "developed_by", "weight": 5},
+    {"source": "AfterMidnight", "target": "Assassin", "type": "shares_architecture", "weight": 3},
+    
+    {"source": "Fight Club", "target": "EDG", "type": "developed_by", "weight": 5},
+    {"source": "Fight Club", "target": "HIVE", "type": "related_to", "weight": 2},
+    
+    {"source": "DerStarke", "target": "MDB", "type": "developed_by", "weight": 4},
+    {"source": "DerStarke", "target": "Triton", "type": "includes", "weight": 2},
+    
+    {"source": "Sparrowhawk", "target": "AED", "type": "developed_by", "weight": 12},
+    {"source": "Sparrowhawk", "target": "EDB", "type": "maintained_by", "weight": 2},
+    
+    {"source": "Swindle", "target": "NDB", "type": "developed_by", "weight": 4},
+    
+    {"source": "Philosoraptor", "target": "AED", "type": "developed_by", "weight": 4},
+    {"source": "Philosoraptor", "target": "EDG", "type": "maintained_by", "weight": 2},
+    
+    {"source": "ELSA", "target": "AED", "type": "developed_by", "weight": 3},
+    
+    {"source": "Brutal Kangaroo", "target": "OSB", "type": "developed_by", "weight": 3},
+    
+    {"source": "Triton", "target": "MDB", "type": "developed_by", "weight": 2},
+    {"source": "Triton", "target": "DerStarke", "type": "component_of", "weight": 2},
+    
+    {"source": "SeaPea", "target": "MDB", "type": "developed_by", "weight": 1},
+    
+    {"source": "Gyrfalcon", "target": "AED", "type": "developed_by", "weight": 1},
+    
+    {"source": "Archimedes", "target": "NDB", "type": "developed_by", "weight": 1},
+    
+    {"source": "Aeris", "target": "AED", "type": "developed_by", "weight": 1},
+    
+    {"source": "Cherry Blossom", "target": "NDB", "type": "developed_by", "weight": 1},
+    
+    {"source": "ExpressLane", "target": "OSB", "type": "developed_by", "weight": 1},
+    
+    {"source": "HammerDrill", "target": "OSB", "type": "developed_by", "weight": 3},
+    
+    {"source": "EDG", "target": "CCI", "type": "reports_to", "weight": 5},
+    {"source": "OSB", "target": "EDG", "type": "division_of", "weight": 15},
+    {"source": "AED", "target": "EDG", "type": "division_of", "weight": 15},
+    {"source": "MDB", "target": "EDG", "type": "division_of", "weight": 15},
+    {"source": "NDB", "target": "EDG", "type": "division_of", "weight": 10},
+    {"source": "EDB", "target": "EDG", "type": "division_of", "weight": 10},
+    {"source": "RDB", "target": "EDG", "type": "division_of", "weight": 8},
+    {"source": "AIB", "target": "EDG", "type": "division_of", "weight": 7},
+    
+    {"source": "EDG", "target": "NSA", "type": "collaboration", "weight": 8},
+    {"source": "EDG", "target": "GCHQ", "type": "collaboration", "weight": 3},
+    {"source": "EDG", "target": "MI5", "type": "collaboration", "weight": 3},
+    {"source": "MDB", "target": "NSA", "type": "shares_exploits", "weight": 5},
+    {"source": "FBI", "target": "NSA", "type": "collaboration", "weight": 8},
+    {"source": "GCHQ", "target": "NSA", "type": "five_eyes", "weight": 6},
+    {"source": "GCHQ", "target": "MI5", "type": "uk_intel", "weight": 5},
+    {"source": "FBI", "target": "MI5", "type": "collaboration", "weight": 6},
+    
+    {"source": "User #71473", "target": "OSB", "type": "works_for", "weight": 98},
+    {"source": "User #71473", "target": "Grasshopper", "type": "contributed_to", "weight": 15},
+    {"source": "User #71473", "target": "UMBRAGE", "type": "contributed_to", "weight": 10},
+    {"source": "User #71473", "target": "Marble", "type": "contributed_to", "weight": 5},
+    
+    {"source": "User #524297", "target": "OSB", "type": "works_for", "weight": 116},
+    {"source": "User #524297", "target": "Fine Dining", "type": "contributed_to", "weight": 20},
+    {"source": "User #524297", "target": "Grasshopper", "type": "contributed_to", "weight": 10},
+    
+    {"source": "User #71467", "target": "NDB", "type": "works_for", "weight": 36},
+    {"source": "User #71467", "target": "Cutthroat", "type": "contributed_to", "weight": 15},
+    {"source": "User #71467", "target": "HIVE", "type": "contributed_to", "weight": 8},
+    
+    {"source": "User #3375506", "target": "OSB", "type": "works_for", "weight": 14},
+    {"source": "User #3375506", "target": "Grasshopper", "type": "contributed_to", "weight": 8},
+    {"source": "User #3375506", "target": "Assassin", "type": "contributed_to", "weight": 5},
+    
+    {"source": "User #71384", "target": "EDB", "type": "works_for", "weight": 12},
+    {"source": "User #71384", "target": "HIVE", "type": "contributed_to", "weight": 10},
+    
+    {"source": "User #71475", "target": "MDB", "type": "works_for", "weight": 8},
+    {"source": "User #71475", "target": "RoidRage", "type": "contributed_to", "weight": 5},
+    
+    {"source": "User #1179751", "target": "OSB", "type": "leads", "weight": 6}
+  ],
+  "categories": {
+    "project_types": [
+      {"id": "implant", "description": "Persistent malware installed on target systems", "color": "#e74c3c"},
+      {"id": "framework", "description": "Build/deployment systems for creating malware", "color": "#9b59b6"},
+      {"id": "infrastructure", "description": "C2 and communication infrastructure", "color": "#3498db"},
+      {"id": "library", "description": "Reusable code components and techniques", "color": "#2ecc71"},
+      {"id": "obfuscation", "description": "Anti-forensics and attribution hiding", "color": "#f39c12"},
+      {"id": "collection", "description": "Data exfiltration and surveillance", "color": "#1abc9c"},
+      {"id": "airgap", "description": "Tools for air-gapped network penetration", "color": "#e67e22"},
+      {"id": "rootkit", "description": "Kernel-level persistence tools", "color": "#c0392b"},
+      {"id": "network", "description": "Network attack and interception tools", "color": "#8e44ad"},
+      {"id": "router", "description": "Router/firmware implants", "color": "#16a085"},
+      {"id": "geolocation", "description": "Location tracking tools", "color": "#d35400"}
+    ],
+    "platforms": [
+      {"id": "Windows", "mentions": 249},
+      {"id": "Linux", "mentions": 126},
+      {"id": "iOS", "mentions": 90},
+      {"id": "Android", "mentions": 39},
+      {"id": "macOS", "mentions": 47},
+      {"id": "Cisco", "mentions": 28},
+      {"id": "MikroTik", "mentions": 24},
+      {"id": "Samsung", "mentions": 15},
+      {"id": "Solaris", "mentions": 14}
+    ]
+  },
+  "statistics": {
+    "total_projects": 35,
+    "total_organizations": 16,
+    "total_users": 427,
+    "top_users_shown": 10,
+    "date_range": "2012-2016",
+    "most_targeted_platforms": ["Windows", "Linux", "iOS", "Android"],
+    "primary_divisions": ["OSB", "EDG", "AED", "MDB", "NDB", "EDB"],
+    "external_collaborators": ["NSA", "FBI", "GCHQ", "MI5"]
+  }
+}
