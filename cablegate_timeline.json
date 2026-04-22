@@ -1,0 +1,1379 @@
+{
+  "nodes": [
+    {
+      "id": "STATE",
+      "name": "STATE",
+      "total": 8009,
+      "yearly": {
+        "1985": 7,
+        "1986": 5,
+        "1987": 5,
+        "1988": 4,
+        "1989": 14,
+        "1990": 14,
+        "1991": 2,
+        "1992": 6,
+        "1993": 4,
+        "1994": 4,
+        "1995": 4,
+        "1996": 6,
+        "1997": 3,
+        "1998": 9,
+        "1999": 6,
+        "2000": 27,
+        "2001": 11,
+        "2002": 5,
+        "2003": 15,
+        "2004": 10,
+        "2005": 14,
+        "2006": 111,
+        "2007": 588,
+        "2008": 2390,
+        "2009": 4095,
+        "2010": 650
+      },
+      "subjects": [
+        "DEMARCHE REQUEST: U.S. CANDIDATE FOR UN SPECIAL EXPERT FOR THE KHMER ROUGE TRIBUNAL",
+        "DEPARTMENT CLEARANCE FOR HONG KONG LEAHY VETTING REQUEST - ILEA BANGKOK TACTICAL SAFETY AND PLANNING",
+        "GUIDANCE: UNGA RESOLUTION ON UN-OPCW COOPERATION",
+        "Allowance and Post Differential Reclassifications TL:SR-715",
+        "SFO-DIP-09-005G:  U.S. DRAFT NEW START TREATY INSPECTION PROTOCOL ANNEXES, CABLE 7 OF 8"
+      ]
+    },
+    {
+      "id": "ANKARA",
+      "name": "ANKARA",
+      "total": 7914,
+      "yearly": {
+        "1979": 1,
+        "1986": 3,
+        "1988": 3,
+        "1989": 3,
+        "1991": 3,
+        "1992": 2,
+        "1994": 2,
+        "1996": 2,
+        "1997": 3,
+        "1998": 1,
+        "2000": 1,
+        "2001": 3,
+        "2002": 165,
+        "2003": 1173,
+        "2004": 1027,
+        "2005": 1133,
+        "2006": 1117,
+        "2007": 1235,
+        "2008": 998,
+        "2009": 873,
+        "2010": 166
+      },
+      "subjects": [
+        "TURKEY'S SUPREME MILITARY COUNCIL",
+        "TURKEY WANTS TIGRIS-EUPHRATES BASIN AGREEMENT",
+        "TURKEY 7TH ANNUAL TIP REPORT: INVESTIGATION AND PROSECUTION OF TRAFFICKERS",
+        "GOT Objects to Inclusion in Port Security Advisory",
+        "TURKEY CFE ENTITLEMENT TRANSFER MOU"
+      ]
+    },
+    {
+      "id": "BAGHDAD",
+      "name": "BAGHDAD",
+      "total": 6674,
+      "yearly": {
+        "1985": 1,
+        "1986": 1,
+        "1987": 1,
+        "1988": 14,
+        "1989": 1,
+        "1990": 10,
+        "2004": 20,
+        "2005": 780,
+        "2006": 1073,
+        "2007": 1353,
+        "2008": 1600,
+        "2009": 1477,
+        "2010": 343
+      },
+      "subjects": [
+        "SANI DISCUSSES KIRKUK WITH BAGHDAD POLITICIANS",
+        "APRIL 27 MCNS: SADR CITY, MOSUL, BASRAH, DEFENSE PROCUREMENT",
+        "RRT ERBIL - ASSYRIAN AUTONOMY IN IRAQ - ANOTHER SLICE OF THE PIE?",
+        "EDUCATING ALI -- TEACHING SADDAM,S LOST GENERATION TO READ",
+        "PM MALIKI TELLS CODEL PELOSI:  IRAQ WANTS FRIENDSHIP, NOT TO BE A BURDEN"
+      ]
+    },
+    {
+      "id": "TOKYO",
+      "name": "TOKYO",
+      "total": 5697,
+      "yearly": {
+        "1985": 2,
+        "1990": 1,
+        "1991": 1,
+        "1992": 1,
+        "1993": 1,
+        "1995": 1,
+        "2005": 8,
+        "2006": 1273,
+        "2007": 1314,
+        "2008": 1501,
+        "2009": 1394,
+        "2010": 200
+      },
+      "subjects": [
+        "DAILY SUMMARY OF JAPANESE PRESS 04/23/08",
+        "JAPANESE MORNING PRESS HIGHLIGHTS 10/15/08",
+        "EAP/DAS KEITH'S MEETING WITH METI OFFICIALS ON PRC PRESIDENT HU JINTAO'S U.S. VISIT",
+        "SCENESETTER FOR ECONOMIC SUBCABINET MEETINGS, DEC. 6-7",
+        "MEDIA REACTION  SUDAN/THAILAND - TOKYO"
+      ]
+    },
+    {
+      "id": "AMMAN",
+      "name": "AMMAN",
+      "total": 4312,
+      "yearly": {
+        "1985": 1,
+        "1986": 1,
+        "1987": 1,
+        "1988": 1,
+        "1989": 1,
+        "1992": 1,
+        "1994": 1,
+        "1996": 1,
+        "1997": 1,
+        "1998": 2,
+        "1999": 1,
+        "2002": 402,
+        "2003": 747,
+        "2004": 603,
+        "2005": 641,
+        "2006": 447,
+        "2007": 433,
+        "2008": 513,
+        "2009": 457,
+        "2010": 57
+      },
+      "subjects": [
+        "CUBA/UNGA: DEMARCHE DELIVERED TO JORDAN",
+        "JORDANIAN WOMEN PROTEST AGAINST PARLIAMENTARY MOVES TO CURTAIL WOMEN'S RIGHTS",
+        "BRIEFING ON LIBYA WMD PROGRAMS: JORDAN",
+        "FSN Conference in Doha on ESTH Builds Awareness, Network",
+        "IRAQ SANCTIONS IMPLEMENTATION UNDER JORDANIAN LAW"
+      ]
+    },
+    {
+      "id": "PARIS",
+      "name": "PARIS",
+      "total": 3775,
+      "yearly": {
+        "1994": 1,
+        "1998": 1,
+        "2001": 1,
+        "2003": 1,
+        "2004": 32,
+        "2005": 1213,
+        "2006": 1007,
+        "2007": 599,
+        "2008": 482,
+        "2009": 364,
+        "2010": 74
+      },
+      "subjects": [
+        "UNESCO - SOCIAL AND HUMAN SCIENCES SECTORS' SEARCH FOR NEW \"RIGHTS\"",
+        "ELECTION SNAPSHOT: IN FIRST WEEK OF SECOND-ROUND CAMPAIGN -- ROYAL WOOING THE CENTRIST VOTE AS SARKO",
+        "MICHEL BARNIER: WHO IS THE NEW EU COMMISSIONER FOR INTERNAL MARKETS?",
+        "UNESCO - FIRST LADY LAURA BUSH'S UNESCO ROUNDTABLE ON TEACHER TRAINING AND LITERACY",
+        "UNESCO: MEETING WITH DEPUTY DIRECTOR GENERAL"
+      ]
+    },
+    {
+      "id": "KUWAIT",
+      "name": "KUWAIT",
+      "total": 3717,
+      "yearly": {
+        "1985": 1,
+        "1986": 1,
+        "1989": 2,
+        "1990": 10,
+        "1992": 1,
+        "1996": 1,
+        "1998": 2,
+        "2001": 4,
+        "2002": 32,
+        "2003": 460,
+        "2004": 263,
+        "2005": 612,
+        "2006": 846,
+        "2007": 615,
+        "2008": 375,
+        "2009": 426,
+        "2010": 66
+      },
+      "subjects": [
+        "FREEDOM AGENDA: KUWAIT NATIONAL ASSEMBLY PASSES NEW PRESS AND PUBLICATIONS LAW",
+        "KUWAIT: LAYING FOUNDATIONS FOR THE NEW SILK ROAD?",
+        "(C) SPEAKER KHORAFI PREDICTS INCREMENTAL PROGRESS ON WOMEN'S RIGHTS, IS RECEPTIVE TO MEPI COOPERATIO",
+        "KUWAIT TO CONSIDER THIRD COMMITTEE HUMAN RIGHTS PRIORITIES",
+        "NATIONAL SECURITY BUREAU DEPUTY COMMENTS ON IRAQ, MUSLIM BROTHERHOOD, NATO"
+      ]
+    },
+    {
+      "id": "MADRID",
+      "name": "MADRID",
+      "total": 3618,
+      "yearly": {
+        "1986": 3,
+        "1988": 1,
+        "1990": 1,
+        "1991": 1,
+        "1994": 1,
+        "1997": 1,
+        "1998": 1,
+        "2002": 1,
+        "2003": 1,
+        "2004": 753,
+        "2005": 766,
+        "2006": 390,
+        "2007": 928,
+        "2008": 383,
+        "2009": 311,
+        "2010": 76
+      },
+      "subjects": [
+        "JAILED ETA LEADERS CALL FOR END TO ARMED STRUGGLE",
+        "SPAIN:  LATEST ON EU ARMS EMBARGO ON CHINA",
+        "SPAIN COUNTRY CLEARANCE FOR NIH/FIC DR. ALFREDO MARTINEZ",
+        "FURTHER THOUGHTS ON SPAIN'S COUNTER-TERRORISM APPROACH",
+        "SPAIN COUNTRY CLEARANCE FOR NASA/ARC MARK LEON"
+      ]
+    },
+    {
+      "id": "MOSCOW",
+      "name": "MOSCOW",
+      "total": 3376,
+      "yearly": {
+        "1985": 1,
+        "1986": 1,
+        "1989": 2,
+        "1990": 5,
+        "1991": 8,
+        "1994": 1,
+        "1999": 2,
+        "2004": 2,
+        "2005": 3,
+        "2006": 438,
+        "2007": 875,
+        "2008": 1075,
+        "2009": 863,
+        "2010": 100
+      },
+      "subjects": [
+        "HUMAN RIGHTS OMBUDSMAN LUKIN ON NGO RE-REGISTRATION, DEMOCRACY ROUNDTABLE",
+        "GOR EDUCATION PLANS MISS LONG-TERM MARK",
+        "DUMA LINKS KOSOVO AND NATO MAP TO FROZEN CONFLICTS' RECOGNITION",
+        "(SBU) TFGG01: Russian media continues to push anti-U.S., anti-Georgian message",
+        "HUMAN RIGHTS AND RELIGIOUS FREEDOM IN RUSSIA"
+      ]
+    },
+    {
+      "id": "COLOMBO",
+      "name": "COLOMBO",
+      "total": 3325,
+      "yearly": {
+        "1986": 1,
+        "1987": 2,
+        "1988": 2,
+        "1989": 2,
+        "1990": 1,
+        "1992": 1,
+        "1994": 2,
+        "1995": 2,
+        "1997": 3,
+        "1998": 1,
+        "1999": 2,
+        "2000": 1,
+        "2001": 2,
+        "2002": 152,
+        "2003": 560,
+        "2004": 460,
+        "2005": 450,
+        "2006": 456,
+        "2007": 451,
+        "2008": 290,
+        "2009": 400,
+        "2010": 84
+      },
+      "subjects": [
+        "FOREIGN GOVERNMENT'S EXPRESSIONS OF INTEREST TO INVEST IN THE PETROLEUM MARKET",
+        "TFIZ01:  Maldives issues statement re Iraq; Religious groups down on war; More rallies planned",
+        "SRI LANKA: FINANCE SECRETARY EXPECTS GROWTH AND STABILITY",
+        "President sets parliamentary elections for April 2; Tigers reiterate support for ceasefire",
+        "SRI LANKA: INFORMATION ON FORCED LABOR AND EXPLOITATIVE CHILD LABOR IN THE PRODUCTION OF GOODS FOR M"
+      ]
+    },
+    {
+      "id": "BEIJING",
+      "name": "BEIJING",
+      "total": 3294,
+      "yearly": {
+        "1988": 2,
+        "1989": 11,
+        "1991": 1,
+        "1992": 1,
+        "1993": 2,
+        "1994": 1,
+        "1995": 1,
+        "1997": 1,
+        "1998": 1,
+        "1999": 1,
+        "2000": 1,
+        "2001": 3,
+        "2002": 2,
+        "2003": 7,
+        "2004": 2,
+        "2005": 3,
+        "2006": 516,
+        "2007": 677,
+        "2008": 824,
+        "2009": 1081,
+        "2010": 156
+      },
+      "subjects": [
+        "NO MAJOR SURPRISES IN SENIOR LEADERSHIP DECISIONS, NEW DEFENSE MINISTER NOT A POLITBURO MEMBER",
+        "PRC/PAKISTAN: NO PLA BASE PLANNED, CCP PLAYING ALL SIDES WITH PARTY OUTREACH",
+        "SPEAKER PELOSI'S MAY 27 MEETING WITH NPC CHAIRMAN WU BANGGUO",
+        "DECEMBER 4 MFA PRESS BRIEFING: DALAI LAMA AND FRANCE, INDIA AND PAKISTAN, SIX-PARTY TALKS, SUDANESE ",
+        "MEDIA REACTION: CHINA DIPLOMACY, MADE IN CHINA"
+      ]
+    },
+    {
+      "id": "TELAVIV",
+      "name": "TELAVIV",
+      "total": 3194,
+      "yearly": {
+        "1985": 2,
+        "1989": 1,
+        "1991": 1,
+        "1992": 1,
+        "1995": 6,
+        "1996": 1,
+        "1998": 1,
+        "1999": 2,
+        "2000": 1,
+        "2001": 1,
+        "2004": 255,
+        "2005": 748,
+        "2006": 549,
+        "2007": 485,
+        "2008": 517,
+        "2009": 540,
+        "2010": 83
+      },
+      "subjects": [
+        "ICRC REP ON POST-THREAT ACTIONS",
+        "ISRAELIS REJECT INTERNATIONAL CONFERENCE IDEA PROPOSED BY ABBAS",
+        "GOI'S NEW TERROR FINANCE DESIGNATION STRATEGY",
+        "TWO POSSIBLE SWINE FLU CASES IN ISRAEL",
+        "A/S WELCH'S MEETING WITH ISRAELI MOD'S GILAD FOCUSES ON BORDER GUARD AGREEMENT, DEVELOPING RELATIONS"
+      ]
+    },
+    {
+      "id": "USUNNEWYORK",
+      "name": "USUNNEWYORK",
+      "total": 3112,
+      "yearly": {
+        "1989": 1,
+        "1990": 1,
+        "1992": 2,
+        "1998": 3,
+        "2003": 12,
+        "2004": 2,
+        "2006": 633,
+        "2007": 745,
+        "2008": 769,
+        "2009": 864,
+        "2010": 80
+      },
+      "subjects": [
+        "NIGERIAN PERM REP OFFERS TO HELP ON SUDAN, IRAN, AND MIDDLE EAST",
+        "FINDING FUNDING FOR UN COMPOUND IN IRAQ",
+        "UN SECURITY COUNCIL ADOPTS RESOLUTION ON EXTENSION OF ICTY AND ICTR JUDGES",
+        "UN A/S MULET BRIEFS ON UNMIS, EXPRESSES CONCERN ON DRC",
+        "UN OVERSIGHT: JIU LACUNAE REPORT (A/60/860)"
+      ]
+    },
+    {
+      "id": "KHARTOUM",
+      "name": "KHARTOUM",
+      "total": 3077,
+      "yearly": {
+        "1989": 2,
+        "1990": 9,
+        "1991": 5,
+        "1992": 7,
+        "1994": 3,
+        "1995": 2,
+        "2002": 1,
+        "2003": 2,
+        "2005": 1,
+        "2006": 860,
+        "2007": 610,
+        "2008": 873,
+        "2009": 617,
+        "2010": 85
+      },
+      "subjects": [
+        "LRA PEACE TALKS SET TO RESUME AMID RENEWED ATTACKS IN SOUTHERN SUDAN",
+        "ANALYSIS OF SUDAN'S NEW ELECTION LAW REVEALS WELTER OF LOOSE ENDS, OBSTACLES TO SMALL PARTIES",
+        "ICC ACTION, SUDAN'S ELECTORAL COMMISSION, AND SOUTH SUDAN POLITICS:  A CONVERSATION WITH MINISTER JO",
+        "USAID-FUNDED PARTNER REQUIRED TO HAND OVER USAID PROPERTY TO HAC AND PAY ADDITIONAL SALARIES",
+        "BEJA CONGRESS: WE NEED INVESTMENT IN THE EAST"
+      ]
+    },
+    {
+      "id": "JAKARTA",
+      "name": "JAKARTA",
+      "total": 3057,
+      "yearly": {
+        "1990": 1,
+        "1991": 1,
+        "1992": 2,
+        "1993": 1,
+        "1994": 1,
+        "1995": 1,
+        "1996": 1,
+        "1997": 2,
+        "1999": 4,
+        "2000": 1,
+        "2001": 1,
+        "2002": 4,
+        "2003": 3,
+        "2004": 9,
+        "2005": 2,
+        "2006": 536,
+        "2007": 782,
+        "2008": 907,
+        "2009": 717,
+        "2010": 81
+      },
+      "subjects": [
+        "ACEH -- STEPS TO PROMOTE SMOOTH ELECTIONS",
+        "SULAWESI -- SMALL EXPLOSION MARKS LOCAL FESTIVAL",
+        "IN SENSATIONAL CASE, POLICE ARREST INDONESIA'S ANTI-CORRUPTION CHIEF",
+        "FM WIRAJUDA STILL RELUCTANT ON KOSOVO FINAL STATUS",
+        "GOI PRIORITIZES RECOVERY OF ADAM AIR BLACK BOXES"
+      ]
+    },
+    {
+      "id": "NEWDELHI",
+      "name": "NEWDELHI",
+      "total": 3038,
+      "yearly": {
+        "1987": 2,
+        "1997": 1,
+        "1998": 1,
+        "2004": 62,
+        "2005": 564,
+        "2006": 410,
+        "2007": 459,
+        "2008": 648,
+        "2009": 777,
+        "2010": 114
+      },
+      "subjects": [
+        "FS MENON AND U/S BURNS DISCUSS REGIONAL SECURITY",
+        "ONE YEAR INTO THE INDO-PAK CEASE-FIRE: OPEN-ENDED TROOP WITHDRAWAL AND 98 PROPOSED CBMS",
+        "BELLWETHER PROJECT: UTTAR PRADESH ELECTION UNLIKELY TO IMPROVE POLITICAL OR ECONOMIC STABILITY",
+        "GOI'S SWIFT COUNTERTERRORISM STEPS HELP LIMIT POLITICAL DAMAGE",
+        "TERRORIST FINANCE: LET PRENOTIFICATION"
+      ]
+    },
+    {
+      "id": "ABUJA",
+      "name": "ABUJA",
+      "total": 3024,
+      "yearly": {
+        "2001": 262,
+        "2002": 326,
+        "2003": 344,
+        "2004": 242,
+        "2005": 137,
+        "2006": 295,
+        "2007": 382,
+        "2008": 464,
+        "2009": 498,
+        "2010": 74
+      },
+      "subjects": [
+        "NIGERIA'S PRESIDENTIAL ELECTIONS - SITREP 2",
+        "NIGERIA: NATIONAL LABOR STRIKE - SITREP #2",
+        "DARFUR PEACE TALKS: NEXT STEPS",
+        "INEC CHAIRMAN UPBEAT ON NIGERIA,S ELECTIONS",
+        "NIGERIA: AMBASSADOR MEETS WITH NSA ON REGIONAL AND OTHER ISSUES"
+      ]
+    },
+    {
+      "id": "THEHAGUE",
+      "name": "THEHAGUE",
+      "total": 3019,
+      "yearly": {
+        "1985": 1,
+        "2000": 54,
+        "2001": 1,
+        "2003": 301,
+        "2004": 553,
+        "2005": 207,
+        "2006": 886,
+        "2007": 425,
+        "2008": 311,
+        "2009": 240,
+        "2010": 40
+      },
+      "subjects": [
+        "REQUEST FOR CAA DIGITAL COPIER REPAIR TECHNICIAN",
+        "NETHERLANDS/EU/UNGA:  ICJ SEPARATION BARRIER ACTION",
+        "NETHERLANDS: RESPECTING HUMAN RIGHTS IN SYRIA",
+        "NETHERLANDS: COMPANIES SUFFER FROM ECONOMIC DOWNTURN, GOVERNMENT DISAGREES ON MEASURES",
+        "ICTY: WITH STRUGAR BALKING AT RETURN, PRESIDENT MERON TO REPORT SAM NONCOMPLIANCE AT 0900 EST TOMORR"
+      ]
+    },
+    {
+      "id": "HARARE",
+      "name": "HARARE",
+      "total": 2995,
+      "yearly": {
+        "1988": 2,
+        "1989": 1,
+        "1991": 1,
+        "1992": 2,
+        "1994": 1,
+        "1995": 1,
+        "1996": 1,
+        "1997": 1,
+        "2000": 239,
+        "2001": 307,
+        "2002": 419,
+        "2003": 504,
+        "2004": 246,
+        "2005": 222,
+        "2006": 171,
+        "2007": 156,
+        "2008": 368,
+        "2009": 305,
+        "2010": 48
+      },
+      "subjects": [
+        "UPCOMING RURAL ELECTIONS LIKELY TO DEMONSTRATE ZANU-PF STRANGLEHOLD",
+        "CUBAN DOCTORS SHUFFLED TO ANOTHER IMMIGRATION HOLDING FACILITY",
+        "DISCORD IN THE MILITARY",
+        "MEDIA REPORT U. S. ARMS BAN; HARARE",
+        "TEACHERS' PAY INCREASE FALLS SHORT OF DEMANDS"
+      ]
+    },
+    {
+      "id": "KABUL",
+      "name": "KABUL",
+      "total": 2957,
+      "yearly": {
+        "1978": 1,
+        "2003": 17,
+        "2004": 1,
+        "2005": 55,
+        "2006": 530,
+        "2007": 621,
+        "2008": 457,
+        "2009": 1090,
+        "2010": 185
+      },
+      "subjects": [
+        "AFGHANISTAN WILL NOT ATTEND NATANZ RIBBON-CUTTING",
+        "UPPER HOUSE IN QUANDRY OVER FATE OF PROVINCIAL COUNCIL-ELECTED MEMBERS",
+        "Extreme Weather Affects Traffic on Afghan-Tajik Bridge",
+        "ANALYSIS OF 2009 PARLIAMENTARY LEADERSHIP ELECTIONS",
+        "CANDIDATE VETTING INCHES FORWARD"
+      ]
+    },
+    {
+      "id": "BANGKOK",
+      "name": "BANGKOK",
+      "total": 2940,
+      "yearly": {
+        "1989": 1,
+        "1998": 1,
+        "2004": 8,
+        "2005": 576,
+        "2006": 707,
+        "2007": 546,
+        "2008": 480,
+        "2009": 538,
+        "2010": 83
+      },
+      "subjects": [
+        "DEMARCHE DELIVERED: SPEAKING OUT ON GITMO AND DETAINEES",
+        "CONSTITUTIONAL COURT ANNULS APRIL 2 POLLS",
+        "THAILAND EMBASSY/STATE DEPARTMENT HUMAN RIGHTS VETTING FOR:  WG.CDR. SIRIPUN RUANCAJORN (WRTAF)",
+        "Nomination for the Department of Labor's Iqbal Masih Award for the Elimination of Child Labor",
+        "RURAL \"SUFFICIENCY ECONOMY\" VILLAGES OFFER ALTERNATIVE APPROACH IN TOUGH ECONOMIC TIMES"
+      ]
+    },
+    {
+      "id": "ROME",
+      "name": "ROME",
+      "total": 2890,
+      "yearly": {
+        "1988": 1,
+        "1993": 1,
+        "1996": 1,
+        "1997": 3,
+        "2002": 349,
+        "2003": 506,
+        "2004": 388,
+        "2005": 312,
+        "2006": 407,
+        "2007": 319,
+        "2008": 288,
+        "2009": 277,
+        "2010": 38
+      },
+      "subjects": [
+        "UNGA 3RD COMMITTEE IRAN RESOLUTION: NO ITALIAN CO-SPONSORSHIP, VOTE DECISION PENDING",
+        "GOI PROVIDES TECHNICAL DETAILS ON FAST BOATS AND     BOAT ENGINESTO IRAN",
+        "ITALY/CUBA: ACTIVITIES FOR THE DAY SOLIDARITY WITH THE CUBAN PEOPLE",
+        "FAO'S EXTERNAL AUDITOR RECOMMENDS OVERHAUL OF ORGANIZATION'S INTERNAL CONTROLS",
+        "SINISCALCO UNVEILS ITALY'S CONTROVERSIAL FOUR-YEAR FINANCIAL PLAN: THE FIRST ACT OF THE POST-TREMONT"
+      ]
+    },
+    {
+      "id": "CAIRO",
+      "name": "CAIRO",
+      "total": 2750,
+      "yearly": {
+        "1985": 2,
+        "1986": 2,
+        "1988": 3,
+        "1989": 1,
+        "1991": 2,
+        "1996": 1,
+        "1997": 2,
+        "1999": 1,
+        "2001": 6,
+        "2004": 1,
+        "2005": 525,
+        "2006": 504,
+        "2007": 477,
+        "2008": 514,
+        "2009": 605,
+        "2010": 104
+      },
+      "subjects": [
+        "EGYPT'S NATIONAL COMMITTEE MEETING ON THE PROLIFERATION SECURITY INITIATIVE",
+        "OMS OF THE FUTURE:  NEA REGIONAL OMS CONFERENCE - CAIRO, EGYPT",
+        "EGYPT CONSIDERING GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM",
+        "EGYPT'S ECONOMY: September 23 PRESS ROUND-UP",
+        "GOE SEEKS CLARIFICATION OF FAA PLANS"
+      ]
+    },
+    {
+      "id": "KINSHASA",
+      "name": "KINSHASA",
+      "total": 2548,
+      "yearly": {
+        "1990": 1,
+        "1993": 1,
+        "1994": 1,
+        "1997": 1,
+        "1998": 2,
+        "1999": 1,
+        "2000": 38,
+        "2001": 12,
+        "2002": 4,
+        "2003": 5,
+        "2004": 224,
+        "2005": 285,
+        "2006": 602,
+        "2007": 390,
+        "2008": 480,
+        "2009": 440,
+        "2010": 61
+      },
+      "subjects": [
+        "PODCASTING HITS THE CONGO",
+        "EASTERN DRC NOTES - MARCH 4",
+        "REQUEST FOR POST INPUT ON GWOT ASSESSMENT",
+        "NORTH KIVU: MOUNTING TUTSI-HUTU TENSIONS CHALLENGE SERUFULI",
+        "WAR CRIMES TRIAL AGAINST FARDC TROOPS BEGINS IN ITURI"
+      ]
+    },
+    {
+      "id": "ABUDHABI",
+      "name": "ABUDHABI",
+      "total": 2547,
+      "yearly": {
+        "1986": 1,
+        "1988": 1,
+        "1989": 4,
+        "1990": 2,
+        "1996": 1,
+        "1997": 1,
+        "2000": 1,
+        "2001": 1,
+        "2003": 542,
+        "2004": 399,
+        "2005": 303,
+        "2006": 395,
+        "2007": 291,
+        "2008": 240,
+        "2009": 296,
+        "2010": 69
+      },
+      "subjects": [
+        "First UAE Export Control Prosecution",
+        "OUTREACH ON LONDON CONFERENCE",
+        "EXTRANCHECK: POST-SHIPMENT VERIFICATION: MEDLINE INTERNATIONAL, DUBAI, UAE.",
+        "NUCLEAR NON-PROLIFERATION TREATY (NPT) PREPARATORY COMMITTEE MEETING:  PAPERS DELIVERED",
+        "UAE: 2004 TRAFFICKING IN PERSONS REPORT"
+      ]
+    },
+    {
+      "id": "ASHGABAT",
+      "name": "ASHGABAT",
+      "total": 2439,
+      "yearly": {
+        "1996": 1,
+        "2001": 1,
+        "2006": 211,
+        "2007": 462,
+        "2008": 803,
+        "2009": 826,
+        "2010": 135
+      },
+      "subjects": [
+        "TURKMENISTAN:  UNPRECEDENTED COOPERATION AND CAMARADERIE AT THE IMAMNAZAR BORDER STATION OPENING",
+        "TURKMENISTAN:  LACKING DIPLOMATIC STATUS, EUROPA HOUSE NOT THE PARTNERSHIP THAT GOVERNMENT EXPECTED",
+        "IRAN: UNESCO DIRECTOR SHARES THE UPS AND DOWNS OF OPERATING IN IRAN",
+        "INTERNATIONAL SUPPORT CONFERENCE ON AFGANISTAN: PARIS, FRANCE",
+        "TURKMENISTAN:  DEVELOPMENT VISIBLE IN LEBAP PROVINCE, BUT RESIDENTS' LIVES NOT YET EASIER"
+      ]
+    },
+    {
+      "id": "BOGOTA",
+      "name": "BOGOTA",
+      "total": 2416,
+      "yearly": {
+        "1985": 1,
+        "1986": 2,
+        "1987": 2,
+        "1988": 3,
+        "1989": 5,
+        "1990": 1,
+        "1991": 2,
+        "1992": 2,
+        "1996": 2,
+        "2000": 3,
+        "2001": 7,
+        "2002": 8,
+        "2003": 5,
+        "2004": 206,
+        "2005": 440,
+        "2006": 330,
+        "2007": 345,
+        "2008": 459,
+        "2009": 478,
+        "2010": 115
+      },
+      "subjects": [
+        "ITSO DEMARCHE DELIVERED TO GOVERNMENT OF COLOMBIA",
+        "SUPPORTING HUMAN RIGHTS AND DEMOCRACY: THE U.S. RECORD IN COLOMBIA 2003-2004",
+        "USG SUPPORT FOR GOC EFFORTS TO COMBAT EXTRAJUDICIAL EXECUTIONS",
+        "STRUGGLE OVER LAND CONTINUES TO FUEL COLOMBIAN CONFLICT",
+        "HUMAN RIGHTS GROUPS CONDITION TALKS ON IMPROVED PROTECTION FOR HUMAN RIGHTS DEFENDERS ON URIBE APOLO"
+      ]
+    },
+    {
+      "id": "BEIRUT",
+      "name": "BEIRUT",
+      "total": 2365,
+      "yearly": {
+        "1985": 31,
+        "1986": 4,
+        "1988": 3,
+        "1989": 1,
+        "1993": 1,
+        "1994": 1,
+        "1995": 4,
+        "1998": 3,
+        "1999": 2,
+        "2000": 2,
+        "2001": 5,
+        "2002": 3,
+        "2003": 7,
+        "2004": 6,
+        "2005": 23,
+        "2006": 544,
+        "2007": 510,
+        "2008": 669,
+        "2009": 495,
+        "2010": 51
+      },
+      "subjects": [
+        "LEBANON: PM SINIORA TO PETRAEUS: PUSH SYRIA TO GET BACK IN ARAB FOLD",
+        "UNIFIL EFFORTS TO COMBAT SEXUAL EXPLOITATION AND HUMAN TRAFFICKING",
+        "LAHOUD REJECTS PATRIARCH'S CALL TO QUIT",
+        "MGLE01:  TRIPOLI ACADEMIC AND MAYOR PLACE BLAME ON HARIRI FOR FEB. 5 RIOT",
+        "MGLE01:  SALLOUKH STONEWALLS, GIVES APOLOGIST DEFENSE OF SHIA DEMANDS"
+      ]
+    },
+    {
+      "id": "CARACAS",
+      "name": "CARACAS",
+      "total": 2338,
+      "yearly": {
+        "1988": 1,
+        "1994": 2,
+        "1998": 6,
+        "1999": 8,
+        "2001": 1,
+        "2003": 1,
+        "2004": 390,
+        "2005": 188,
+        "2006": 403,
+        "2007": 392,
+        "2008": 408,
+        "2009": 448,
+        "2010": 90
+      },
+      "subjects": [
+        "MAVERICK DEPUTY MAKES CORRUPTION ALLEGATIONS",
+        "AMBASSADOR VISITS ANZOATEGUI AND NUEVA ESPARTA",
+        "CHAVEZ ANNOUNCES NAVAL EXERCISE WITH RUSSIA - MAYBE",
+        "VENEZUELAN LEGISLATIVE AGENDA: SO MUCH TO DO, AND SO LITTLE TIME",
+        "STRUCTURED NOTES REDUX: NEW RESOLUTION ROILS VENEZUELAN BANKING SECTOR"
+      ]
+    },
+    {
+      "id": "HANOI",
+      "name": "HANOI",
+      "total": 2312,
+      "yearly": {
+        "2000": 37,
+        "2001": 86,
+        "2002": 102,
+        "2003": 183,
+        "2004": 230,
+        "2005": 312,
+        "2006": 312,
+        "2007": 336,
+        "2008": 389,
+        "2009": 287,
+        "2010": 38
+      },
+      "subjects": [
+        "DEVELOPMENTS AND IMPROVEMENTS IN VIETNAM'S LABOR EXPORT SYSTEM",
+        "TWO NEW AVIAN INFLUENZA POULTRY OUTBREAKS AND UPDATE ON RECENT HUMAN FATALITY",
+        "Vietnamese Border Guards' role in Combating Human Trafficking",
+        "PEPFAR VIETNAM'S STRATEGIC INFORMATION ACTIVITY",
+        "VIETNAM: REORGANIZATION OF IPR AGENCIES - FUTURE OF TRADEMARK OFFICE IN LIMBO"
+      ]
+    },
+    {
+      "id": "TAIPEI",
+      "name": "TAIPEI",
+      "total": 2300,
+      "yearly": {
+        "1989": 1,
+        "1997": 1,
+        "1999": 1,
+        "2004": 195,
+        "2005": 806,
+        "2006": 433,
+        "2007": 373,
+        "2008": 248,
+        "2009": 223,
+        "2010": 19
+      },
+      "subjects": [
+        "MTAG:  UPDATE ON TAIWAN GAMEPLAN",
+        "TAIWAN SPECIAL 301 REVIEW: AIT SUBMISSION",
+        "SEF CHAIRMAN SEES PROGRESS TOWARD RENEWED SEF- ARATS COMMUNICATION",
+        "TAIWAN'S IMPENDING HEALTH CARE CRISES",
+        "FM HUANG ON FOREIGN RELATIONS, CAMPAIGN RHETORIC, AND NORTH KOREA"
+      ]
+    },
+    {
+      "id": "MEXICO",
+      "name": "MEXICO",
+      "total": 2284,
+      "yearly": {
+        "1997": 1,
+        "2005": 2,
+        "2006": 260,
+        "2007": 362,
+        "2008": 575,
+        "2009": 937,
+        "2010": 147
+      },
+      "subjects": [
+        "MEXICO 2007 REPORT ON INVESTMENT DISPUTES AND EXPROPRIATION CLAIMS - PART 1",
+        "DEATH PENALTY DEBATE ROILS MEXICAN POLITICAL CLASS",
+        "MX 2009-492, DEA LEAHY VETTING REQUEST",
+        "MX #2008-079, LEGAT LEAHY VETTING REQUEST",
+        "MX 2009-510, DEA LEAHY VETTING REQUEST"
+      ]
+    },
+    {
+      "id": "KATHMANDU",
+      "name": "KATHMANDU",
+      "total": 2278,
+      "yearly": {
+        "2002": 249,
+        "2003": 288,
+        "2004": 181,
+        "2005": 160,
+        "2006": 603,
+        "2007": 317,
+        "2008": 187,
+        "2009": 251,
+        "2010": 42
+      },
+      "subjects": [
+        "NEPAL: ADVOCATING EXTENSION OF OFFICE OF THE HIGH COMMISSIONER FOR HUMAN RIGHTS (OHCHR)",
+        "2005-2006 INTERNATIONAL NARCOTICS CONTROL STRATEGY (INCSR) REPORT",
+        "MAOISTS BLOCK FOOD ACCESS TO BHUTANESE REFUGEE CAMPS",
+        "CI/KR RESPONSE FOR S/CT - NEPAL",
+        "NEPAL: MAOIST CHAIRMAN SEEKS TERRORIST DE-LISTING"
+      ]
+    },
+    {
+      "id": "BUENOSAIRES",
+      "name": "BUENOSAIRES",
+      "total": 2230,
+      "yearly": {
+        "1966": 1,
+        "1994": 1,
+        "1995": 1,
+        "2003": 2,
+        "2004": 30,
+        "2005": 24,
+        "2006": 499,
+        "2007": 582,
+        "2008": 515,
+        "2009": 480,
+        "2010": 95
+      },
+      "subjects": [
+        "Argentina Economic and Financial Weekly for the week ending May 12, 2006",
+        "MEDIA REACTION HADITHA INVESTIGATION; US POLICY SHIFT ON IRAN; ARGENTINE AMBASSADOR TO US ON BILATER",
+        "MEDIA REACTION US IMMIGRATION POLICY BLOW TO EGYPT TORTURE LEGITIMIZATION CHAVEZ AND MERCOSUR US- UR",
+        "Argentina: San Luis Governor Discusses His Province's Economic Turnaround",
+        "ARGENTINA ECONOMIC AND FINANCIAL REVIEW, MAY 21 - 31, 2007"
+      ]
+    },
+    {
+      "id": "ISLAMABAD",
+      "name": "ISLAMABAD",
+      "total": 2219,
+      "yearly": {
+        "1985": 1,
+        "1986": 2,
+        "1989": 1,
+        "1990": 1,
+        "1991": 1,
+        "1992": 1,
+        "1994": 1,
+        "1995": 1,
+        "1996": 4,
+        "1997": 5,
+        "1998": 10,
+        "1999": 1,
+        "2001": 1,
+        "2003": 1,
+        "2005": 68,
+        "2006": 273,
+        "2007": 396,
+        "2008": 671,
+        "2009": 698,
+        "2010": 82
+      },
+      "subjects": [
+        "PAKISTAN MEDIA REACTION: TERRORISM, KERRY-LUGAR BILL, MISCELLANEOUS, INDIA-PAKISTAN - OCTOBER 19, 20",
+        "PAKISTAN'S Q1 INDICATORS REFLECT ECONOMIC DECLINE",
+        "BY-ELECTIONS NOW SET FOR JUNE 26",
+        "SECURITY AND THE CAMPAIGN IN PAKISTAN",
+        "DEMARCHE DELIVERED ON DERAILING UN HUMAN RIGHTS COUNCIL SPECIAL SESSION ON LEBANON"
+      ]
+    },
+    {
+      "id": "JERUSALEM",
+      "name": "JERUSALEM",
+      "total": 2216,
+      "yearly": {
+        "1988": 1,
+        "1990": 1,
+        "1995": 3,
+        "1996": 1,
+        "1998": 1,
+        "1999": 1,
+        "2002": 2,
+        "2003": 4,
+        "2004": 4,
+        "2005": 51,
+        "2006": 356,
+        "2007": 402,
+        "2008": 600,
+        "2009": 689,
+        "2010": 100
+      },
+      "subjects": [
+        "E-1 MOVE APPEARS IMMINENT",
+        "NON-PAYMENT OF PA SALARIES IMPERILS MICROFINANCE PROGRAMS",
+        "PA MINISTER FEARS FOR HER GAZA FAMILY",
+        "RELIGIOUS WORKERS FACE VISA DENIALS",
+        "JERUSALEM MEDIA REACTION (11/06):  SPECULATION ON PRESIDENT-ELECT OBAMA'S MIDDLE EAST POLICIES"
+      ]
+    },
+    {
+      "id": "DHAKA",
+      "name": "DHAKA",
+      "total": 1984,
+      "yearly": {
+        "1987": 1,
+        "1988": 1,
+        "1991": 1,
+        "1994": 1,
+        "1997": 1,
+        "2004": 4,
+        "2005": 411,
+        "2006": 291,
+        "2007": 368,
+        "2008": 363,
+        "2009": 465,
+        "2010": 77
+      },
+      "subjects": [
+        "HUMAN RIGHTS VETTING FOR COMBAT ENGINEER OFFICER COURSE, JUNE 6 TO OCTOBER 1, 2007",
+        "MICRO-CREDIT BANK BOSS PROPOSES POLITICAL FORMULA",
+        "BELEAGUERED NGO LEADER HOPEFUL BDG WILL RELEASE BLOCKED FUNDS",
+        "LEAHY VETTING FOR CIVIL MILITARY OBSERVER COURSE (CMLO) IN BANGLADESH, 4-15 OCTOBER, 2009",
+        "BANGLADESH: DEMARCHE ON ADDRESSING THE THREAT OF AVIAN INFLUENZA"
+      ]
+    },
+    {
+      "id": "SEOUL",
+      "name": "SEOUL",
+      "total": 1980,
+      "yearly": {
+        "1988": 2,
+        "1992": 3,
+        "1993": 1,
+        "1994": 2,
+        "1998": 1,
+        "2003": 1,
+        "2006": 431,
+        "2007": 380,
+        "2008": 367,
+        "2009": 690,
+        "2010": 102
+      },
+      "subjects": [
+        "TRIPARTITE DEMARCHE ON THE UN DECLARATION ON THE RIGHTS OF INDIGENOUS PEOPLES",
+        "BLUE HOUSE LINEUP: EXPERIENCE IN, PROFESSORS OUT",
+        "SCENESETTER FOR THE 40TH US-ROK SECURITY CONSULTATIVE MEETING (SCM)",
+        "FORMER PM HAN MYEONG-SOOK SEEKS TO UNDERSTAND U.S. POSITION",
+        "CHARTING OUT INTER-KOREAN COOPERATION"
+      ]
+    },
+    {
+      "id": "BRUSSELS",
+      "name": "BRUSSELS",
+      "total": 1976,
+      "yearly": {
+        "1994": 1,
+        "1998": 1,
+        "2003": 17,
+        "2004": 272,
+        "2005": 128,
+        "2006": 135,
+        "2007": 278,
+        "2008": 427,
+        "2009": 633,
+        "2010": 84
+      },
+      "subjects": [
+        "EU/CYPRUS: DEVELOPING THE EU'S POST-REFERENDA APPROACH",
+        "BELGIUM: NO PLANS TO CHANGE POSITION ON CHINA ARMS EMBARGO",
+        "A/S CARTER'S APRIL 23 MEETING WITH BELGIAN MFA AFRICA TEAM",
+        "EU ENERGY SECURITY GOALS FOR THE SENIOR LEADERSHIP GROUP MEETING",
+        "EU MIGRATION PACT: WHAT'S IN, WHAT'S OUT"
+      ]
+    },
+    {
+      "id": "TEGUCIGALPA",
+      "name": "TEGUCIGALPA",
+      "total": 1958,
+      "yearly": {
+        "2002": 98,
+        "2003": 282,
+        "2004": 253,
+        "2005": 408,
+        "2006": 103,
+        "2007": 85,
+        "2008": 167,
+        "2009": 494,
+        "2010": 68
+      },
+      "subjects": [
+        "20 GTMO CUBANS RESETTLED IN HONDURAS: ONLY 3 REMAIN; IOM ASKS FOR PRM PERMISSION TO RE-PROGRAM MONEY",
+        "Honduras Poised to Become Leader in Port Security",
+        "MERIDA IS APPROVED: NOW WHAT?",
+        "Drug confiscations in Honduras for 2009 already exceed 2008 totals",
+        "RECENT DRUG-RELATED ARRESTS AND SEIZURES IN HONDURAS"
+      ]
+    },
+    {
+      "id": "OTTAWA",
+      "name": "OTTAWA",
+      "total": 1947,
+      "yearly": {
+        "1985": 1,
+        "2003": 290,
+        "2004": 63,
+        "2005": 467,
+        "2006": 124,
+        "2007": 194,
+        "2008": 437,
+        "2009": 325,
+        "2010": 46
+      },
+      "subjects": [
+        "TERRORIST FINANCE - OTTAWA: GOC PLANS TO LIST HIZB-I ISLMI GULBUDDIN (HIG), GULBUDDIN HEKMATYAR AND ",
+        "S/CRS COORDINATOR HERBST'S MEETINGS IN CANADA",
+        "(C/NF) CANADA: A GOVERNMENT ADRIFT",
+        "CANADA'S DELEGATION TO THE VIENNA FORUM ON HUMAN TRAFFICKING",
+        "CANADIAN AGREEMENT ON IMPORTANCE OF INTL SUPPORT FOR UNSCR 1267"
+      ]
+    },
+    {
+      "id": "BRASILIA",
+      "name": "BRASILIA",
+      "total": 1945,
+      "yearly": {
+        "1986": 1,
+        "2002": 1,
+        "2003": 45,
+        "2004": 196,
+        "2005": 306,
+        "2006": 390,
+        "2007": 320,
+        "2008": 279,
+        "2009": 348,
+        "2010": 59
+      },
+      "subjects": [
+        "R/V RONALD H. BROWN DATA FROM JUN 18-22, 2006 REQUEST FOR PORT CALL DELIVERED- FILE NO. 2006021",
+        "COUNTRY CLEARANCE APPROVAL FOR USGS SCIENTIST CARLIN",
+        "BRAZIL:  AGREEMENT TO SUSPEND BRAZIL'S PARTICIPATION IN INTERNATIONAL SPACE STATION AGREEMENT",
+        "BRAZIL: ACTING MINES AND ENERGY MINISTER HUBNER",
+        "COUNTRY CLEARANCE FOR VISIT OF A/S MCMURRAY"
+      ]
+    },
+    {
+      "id": "RANGOON",
+      "name": "RANGOON",
+      "total": 1863,
+      "yearly": {
+        "1992": 4,
+        "1993": 1,
+        "1994": 1,
+        "2001": 1,
+        "2002": 61,
+        "2003": 199,
+        "2004": 200,
+        "2005": 194,
+        "2006": 242,
+        "2007": 230,
+        "2008": 358,
+        "2009": 331,
+        "2010": 41
+      },
+      "subjects": [
+        "BURMA'S KACHIN STATE: COUPS, TEAK, AND CHINESE",
+        "BURMA: KEY KACHIN GROUPS TO FORM POLITICAL PARTY",
+        "BURMA:DEVELOPMENT AND EXERCISING OF AVIAN AND PANDEMIC FLU RESPONSE PLANS",
+        "BURMA:  NLD UNCLES SUPPORT SECRETARY'S MESSAGE TO GOB",
+        "RAZALI'S TWELFTH VISIT TO RANGOON"
+      ]
+    },
+    {
+      "id": "NAIROBI",
+      "name": "NAIROBI",
+      "total": 1818,
+      "yearly": {
+        "1996": 1,
+        "2005": 131,
+        "2006": 371,
+        "2007": 356,
+        "2008": 361,
+        "2009": 536,
+        "2010": 62
+      },
+      "subjects": [
+        "SOMALIA - TFG ATTACKS IN MOGADISHU, ROBOW RESIGNS POST",
+        "SOMALIA HUMANITARIAN UPDATE: FOOD SECURITY IMPROVES BUT CHALLENGES REMAIN",
+        "SOMALIA - REQUEST TDY SUPPORT FOR SOMALIA COVERAGE IN DJIBOUTI",
+        "NURTURING DEMOCRACY -- AMBASSADOR'S VISIT TO NYANZA AND WESTERN PROVINCES",
+        "Cultural Programs Keep Embassy Nairobi Busy in 1st Qtr"
+      ]
+    },
+    {
+      "id": "MANILA",
+      "name": "MANILA",
+      "total": 1793,
+      "yearly": {
+        "1994": 1,
+        "2001": 1,
+        "2005": 321,
+        "2006": 389,
+        "2007": 417,
+        "2008": 304,
+        "2009": 322,
+        "2010": 38
+      },
+      "subjects": [
+        "The Philippines Representative to APEC Telecom Ministerial Conference",
+        "Somali Pirates: Philippines thanks U.S. Navy",
+        "THE PARTY-LIST SYSTEM IN THE 2007 PHILIPPINE ELECTIONS",
+        "PHILIPPINE AUTHORITIES CAPTURE KEY TERRORIST IN MINDANAO",
+        "RED CROSS HOSTAGES: PURSUING NEGOTIATIONS, BUT PREPARING FOR WORST"
+      ]
+    },
+    {
+      "id": "YEREVAN",
+      "name": "YEREVAN",
+      "total": 1730,
+      "yearly": {
+        "1993": 1,
+        "2003": 21,
+        "2004": 291,
+        "2005": 304,
+        "2006": 322,
+        "2007": 250,
+        "2008": 260,
+        "2009": 253,
+        "2010": 28
+      },
+      "subjects": [
+        "LUNCH WITH AN OLIGARCH: SARGSIAN ALLY CRITICIZES GOAM APPROACH TO ECONOMIC CRISIS",
+        "(IMI) ARMENIA EXPO 2005 TRADE SHOW IN YEREVAN",
+        "SIGNIFICANT ACTIVITIES REPORT-ODC ARMENIA-MAY 2008",
+        "PRESIDENT SARGSIAN INVITES PRESIDENT GUL TO YEREVAN",
+        "RSVP: EXTRANCHECK: POST-SHIPMENT VERIFICATION"
+      ]
+    },
+    {
+      "id": "VIENNA",
+      "name": "VIENNA",
+      "total": 1721,
+      "yearly": {
+        "1993": 2,
+        "2005": 394,
+        "2006": 332,
+        "2007": 359,
+        "2008": 280,
+        "2009": 306,
+        "2010": 48
+      },
+      "subjects": [
+        "INFORMING AUSTRIA OF U.S. NUCLEAR NON-PROLIFERATION AND DISARMAMENT PROGRAMS",
+        "AUSTRIA ON THE MARCH 30-31 FOREIGN MINISTERS MEETING (GYMNICH)",
+        "AUSTRIAN MEDIA HIGHLIGHTS: July 10, 2007",
+        "OFID, Austrian Government Undecided On IDLO Director General Election (International Development Law",
+        "AUSTRAIN EDUCATION MINISTER RECOMMENDS BILINGUAL INSTRUCTION AS INTEGRATION MEASURE"
+      ]
+    },
+    {
+      "id": "BERLIN",
+      "name": "BERLIN",
+      "total": 1719,
+      "yearly": {
+        "1991": 1,
+        "1995": 2,
+        "1999": 2,
+        "2004": 1,
+        "2005": 4,
+        "2006": 162,
+        "2007": 346,
+        "2008": 396,
+        "2009": 677,
+        "2010": 128
+      },
+      "subjects": [
+        "WHAT HAPPENS AFTER THE GERMAN ELECTIONS?",
+        "(C) GERMANY AGREES TO JOINT DEMARCHE ON KOSOVO ELECTIONS",
+        "SCENESETTER FOR VISIT OF NEA PDAS JAMES F. JEFFREY",
+        "GERMAN OFFICIALS NOTE IMPROVEMENT IN PROVIDING ASSISTANCE TO TIP VICTIMS",
+        "(S) GERMANY NOTIFIED ABOUT IRANIAN BALLISTIC MISSILE PROGRAM SEEKING GERMAN TEST EQUIPMENT"
+      ]
+    },
+    {
+      "id": "ZAGREB",
+      "name": "ZAGREB",
+      "total": 1686,
+      "yearly": {
+        "1991": 5,
+        "1992": 48,
+        "1994": 25,
+        "1995": 53,
+        "2003": 188,
+        "2004": 116,
+        "2005": 79,
+        "2006": 271,
+        "2007": 269,
+        "2008": 278,
+        "2009": 288,
+        "2010": 66
+      },
+      "subjects": [
+        "DAS DICARLO'S MEETING WITH PRESIDENT MESIC",
+        "INTELLIGENCE SERVICE UNDER FIRE FOR INTIMIDATION",
+        "LITTLE LIGHT AT THE END OF THE TUNNEL ON TENANCY RIGHTS",
+        "CROATIAN'S ARE POSITIVE ABOUT U.S. STATEMENT ON IRAN",
+        "CROATIAN UNEMPLOYMENT GROWING"
+      ]
+    },
+    {
+      "id": "SANTODOMINGO",
+      "name": "SANTODOMINGO",
+      "total": 1673,
+      "yearly": {
+        "2003": 124,
+        "2004": 246,
+        "2005": 258,
+        "2006": 191,
+        "2007": 285,
+        "2008": 217,
+        "2009": 281,
+        "2010": 71
+      },
+      "subjects": [
+        "U.S. INITIATIVES FOR THE 59TH UNGA DELIVERED TO DOMINICAN REPUBLIC",
+        "VICE PRESIDENT FAULTS PRESIDENT MEJIA, ADDRESSES CAMPAIGN ISSUES",
+        "IRAQ: SUPPORTING THE IIG - DOMINICAN REPUBLIC RESPONSE",
+        "LEAHY VETTING REQUEST - MAAG MSOT 415 SEFA COUNTER TERRORISM, (92 NAMES), D.R., 07.01.2009",
+        "DR: Electricity Sector at a Crossroads"
+      ]
+    }
+  ],
+  "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+  ],
+  "total_cables": 251287
+}

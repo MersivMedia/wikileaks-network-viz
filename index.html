@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WikiLeaks Network Visualization - 3D</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a; 
+      color: #fff;
+      overflow: hidden;
+    }
+    #container { width: 100vw; height: 100vh; }
+    
+    .controls {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 100;
+      background: rgba(20, 20, 30, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      max-width: 320px;
+    }
+    
+    .controls h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #00ff88;
+    }
+    
+    .controls h2 {
+      font-size: 14px;
+      margin: 15px 0 10px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s;
+      background: #2a2a3a;
+      color: #fff;
+    }
+    
+    .btn:hover { background: #3a3a4a; }
+    .btn.active { background: #00ff88; color: #000; }
+    
+    .stats {
+      margin-top: 15px;
+      padding: 12px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    
+    .stats span { color: #00ff88; font-weight: bold; }
+    
+    .info-panel {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(20, 20, 30, 0.9);
+      padding: 15px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      max-width: 350px;
+      display: none;
+    }
+    
+    .info-panel h3 {
+      color: #00ff88;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    
+    .info-panel p {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.6;
+    }
+    
+    .legend {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(20, 20, 30, 0.9);
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 12px;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 5px 0;
+    }
+    
+    .legend-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .search-box {
+      margin-top: 15px;
+    }
+    
+    .search-box input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      font-size: 13px;
+    }
+    
+    .search-box input::placeholder { color: #666; }
+    .search-box input:focus { outline: none; border-color: #00ff88; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  
+  <div class="controls">
+    <h1>🌐 WikiLeaks Network Map</h1>
+    
+    <h2>Dataset</h2>
+    <div class="btn-group">
+      <button class="btn active" onclick="loadDataset('cablegate')">Cablegate Embassies</button>
+      <button class="btn" onclick="loadDataset('dnc')">DNC Emails</button>
+    </div>
+    
+    <h2>View Mode</h2>
+    <div class="btn-group">
+      <button class="btn active" onclick="setViewMode('3d')">3D</button>
+      <button class="btn" onclick="setViewMode('2d')">2D</button>
+    </div>
+    
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search nodes..." oninput="searchNodes(this.value)">
+    </div>
+    
+    <div class="stats" id="stats">
+      Loading...
+    </div>
+  </div>
+  
+  <div class="info-panel" id="info-panel">
+    <h3 id="info-title">Node Info</h3>
+    <p id="info-content"></p>
+  </div>
+  
+  <div class="legend" id="legend">
+    <strong>Connection Strength</strong>
+    <div class="legend-item"><div class="legend-color" style="background:#ff4444"></div> High</div>
+    <div class="legend-item"><div class="legend-color" style="background:#ffaa00"></div> Medium</div>
+    <div class="legend-item"><div class="legend-color" style="background:#44ff88"></div> Low</div>
+  </div>
+
+  <script src="https://unpkg.com/3d-force-graph@1"></script>
+  <script>
+    let Graph;
+    let currentDataset = 'cablegate';
+    let graphData = {};
+    
+    // Color schemes
+    const colors = {
+      cablegate: {
+        node: (node) => {
+          const val = node.val || 1;
+          if (val > 1000) return '#ff4444';
+          if (val > 500) return '#ffaa00';
+          return '#44ff88';
+        },
+        link: (link) => {
+          const val = link.value || 1;
+          if (val > 100) return 'rgba(255,68,68,0.6)';
+          if (val > 50) return 'rgba(255,170,0,0.4)';
+          return 'rgba(68,255,136,0.2)';
+        }
+      },
+      dnc: {
+        node: (node) => {
+          const name = node.name || '';
+          if (name.includes('dnc')) return '#00aaff';
+          if (name.includes('politico') || name.includes('washpost')) return '#ff6600';
+          return '#44ff88';
+        },
+        link: () => 'rgba(100,200,255,0.2)'
+      }
+    };
+    
+    async function loadDataset(name) {
+      currentDataset = name;
+      
+      // Update buttons
+      document.querySelectorAll('.btn-group:first-of-type .btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      const file = name === 'cablegate' ? 'cablegate_embassies.json' : 'dnc_graph.json';
+      
+      try {
+        const response = await fetch(file);
+        graphData = await response.json();
+        
+        // Update stats
+        document.getElementById('stats').innerHTML = `
+          <div>Nodes: <span>${graphData.nodes.length}</span></div>
+          <div>Edges: <span>${graphData.links.length}</span></div>
+          <div>Dataset: <span>${name === 'cablegate' ? 'US Diplomatic Cables' : 'DNC Email Network'}</span></div>
+        `;
+        
+        // Update legend
+        if (name === 'cablegate') {
+          document.getElementById('legend').innerHTML = `
+            <strong>Embassy Activity</strong>
+            <div class="legend-item"><div class="legend-color" style="background:#ff4444"></div> High (1000+ cables)</div>
+            <div class="legend-item"><div class="legend-color" style="background:#ffaa00"></div> Medium (500+)</div>
+            <div class="legend-item"><div class="legend-color" style="background:#44ff88"></div> Normal</div>
+          `;
+        } else {
+          document.getElementById('legend').innerHTML = `
+            <strong>Email Domains</strong>
+            <div class="legend-item"><div class="legend-color" style="background:#00aaff"></div> DNC Internal</div>
+            <div class="legend-item"><div class="legend-color" style="background:#ff6600"></div> Media</div>
+            <div class="legend-item"><div class="legend-color" style="background:#44ff88"></div> External</div>
+          `;
+        }
+        
+        renderGraph();
+      } catch (e) {
+        console.error('Failed to load dataset:', e);
+        document.getElementById('stats').innerHTML = 'Error loading data';
+      }
+    }
+    
+    function renderGraph() {
+      const container = document.getElementById('container');
+      container.innerHTML = '';
+      
+      const colorScheme = colors[currentDataset];
+      
+      Graph = ForceGraph3D()(container)
+        .graphData(graphData)
+        .nodeLabel(node => `<div style="background:rgba(0,0,0,0.8);padding:8px 12px;border-radius:6px;font-size:13px;">
+          <strong style="color:#00ff88">${node.name || node.id}</strong>
+          ${node.val ? '<br>Connections: ' + node.val : ''}
+        </div>`)
+        .nodeColor(colorScheme.node)
+        .nodeVal(node => Math.sqrt(node.val || 1) * 2)
+        .nodeOpacity(0.9)
+        .linkColor(colorScheme.link)
+        .linkWidth(link => Math.sqrt(link.value || 1) * 0.3)
+        .linkOpacity(0.6)
+        .backgroundColor('#0a0a0a')
+        .onNodeClick(node => {
+          // Focus on node
+          const distance = 200;
+          const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+          Graph.cameraPosition(
+            { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio },
+            node,
+            1000
+          );
+          
+          // Show info panel
+          const panel = document.getElementById('info-panel');
+          document.getElementById('info-title').textContent = node.name || node.id;
+          
+          const connections = graphData.links.filter(l => 
+            l.source.id === node.id || l.target.id === node.id ||
+            l.source === node.id || l.target === node.id
+          ).length;
+          
+          document.getElementById('info-content').textContent = 
+            `Connections: ${connections}${node.val ? ' | Activity Score: ' + node.val : ''}`;
+          panel.style.display = 'block';
+        })
+        .onBackgroundClick(() => {
+          document.getElementById('info-panel').style.display = 'none';
+        });
+        
+      // Add particle animation on links for cablegate
+      if (currentDataset === 'cablegate') {
+        Graph
+          .linkDirectionalParticles(2)
+          .linkDirectionalParticleWidth(1.5)
+          .linkDirectionalParticleSpeed(0.005);
+      }
+    }
+    
+    function setViewMode(mode) {
+      document.querySelectorAll('.btn-group:nth-of-type(2) .btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      if (mode === '2d') {
+        Graph.numDimensions(2);
+      } else {
+        Graph.numDimensions(3);
+      }
+    }
+    
+    function searchNodes(query) {
+      if (!query) {
+        Graph.nodeColor(colors[currentDataset].node);
+        return;
+      }
+      
+      query = query.toLowerCase();
+      Graph.nodeColor(node => {
+        const name = (node.name || node.id).toLowerCase();
+        return name.includes(query) ? '#ffffff' : colors[currentDataset].node(node);
+      });
+    }
+    
+    // Initialize
+    loadDataset('cablegate');
+  </script>
+</body>
+</html>

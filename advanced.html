@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WikiLeaks Cablegate - Timeline & Network Analysis</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0a0a15 0%, #1a1a2e 100%);
+      color: #fff;
+      min-height: 100vh;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      grid-template-rows: auto 1fr;
+      height: 100vh;
+      gap: 0;
+    }
+    
+    .header {
+      grid-column: 1 / -1;
+      padding: 20px 30px;
+      background: rgba(0,0,0,0.3);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header h1 {
+      font-size: 24px;
+      color: #00ff88;
+    }
+    
+    .header .subtitle {
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .sidebar {
+      background: rgba(0,0,0,0.2);
+      border-right: 1px solid rgba(255,255,255,0.1);
+      overflow-y: auto;
+      padding: 20px;
+    }
+    
+    .main {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #graph-container {
+      flex: 1;
+      position: relative;
+    }
+    
+    .timeline-container {
+      height: 150px;
+      background: rgba(0,0,0,0.3);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+    }
+    
+    .section {
+      margin-bottom: 25px;
+    }
+    
+    .section h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    
+    .embassy-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    
+    .embassy-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      margin-bottom: 4px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .embassy-item:hover {
+      background: rgba(0,255,136,0.1);
+    }
+    
+    .embassy-item.selected {
+      background: rgba(0,255,136,0.2);
+      border: 1px solid rgba(0,255,136,0.3);
+    }
+    
+    .embassy-name {
+      font-weight: 500;
+    }
+    
+    .embassy-count {
+      font-size: 12px;
+      color: #00ff88;
+    }
+    
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      height: 80px;
+      gap: 4px;
+      margin-top: 10px;
+    }
+    
+    .bar {
+      flex: 1;
+      background: linear-gradient(to top, #00ff88, #00aa55);
+      border-radius: 3px 3px 0 0;
+      min-height: 2px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .bar:hover {
+      background: linear-gradient(to top, #00ffaa, #00ff88);
+    }
+    
+    .bar .tooltip {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.9);
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    
+    .bar:hover .tooltip { opacity: 1; }
+    
+    .year-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      font-size: 11px;
+      color: #666;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ff88;
+    }
+    
+    .stat-label {
+      font-size: 11px;
+      color: #888;
+      margin-top: 5px;
+    }
+    
+    .detail-panel {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      width: 320px;
+      background: rgba(20, 20, 30, 0.95);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+      display: none;
+      z-index: 100;
+    }
+    
+    .detail-panel h3 {
+      color: #00ff88;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    
+    .detail-panel .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+      color: #666;
+      font-size: 20px;
+    }
+    
+    .detail-panel .close:hover { color: #fff; }
+    
+    .subject-list {
+      margin-top: 15px;
+    }
+    
+    .subject-item {
+      padding: 8px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 4px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: #aaa;
+    }
+    
+    .mini-chart {
+      height: 60px;
+      margin-top: 15px;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    
+    .search-input:focus { outline: none; border-color: #00ff88; }
+    .search-input::placeholder { color: #555; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1>🌐 WikiLeaks Cablegate Analysis</h1>
+        <div class="subtitle">251,287 US Diplomatic Cables (1966-2010)</div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="total-embassies">--</div>
+          <div class="stat-label">Embassies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="total-cables">--</div>
+          <div class="stat-label">Cables</div>
+        </div>
+      </div>
+    </header>
+    
+    <aside class="sidebar">
+      <div class="section">
+        <input type="text" class="search-input" placeholder="Search embassies..." id="search">
+      </div>
+      
+      <div class="section">
+        <h3>Top Embassies by Volume</h3>
+        <div class="embassy-list" id="embassy-list"></div>
+      </div>
+    </aside>
+    
+    <main class="main">
+      <div id="graph-container"></div>
+      
+      <div class="timeline-container">
+        <h3 style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 15px;">
+          Cable Volume Over Time
+        </h3>
+        <div class="bar-chart" id="timeline-chart"></div>
+        <div class="year-labels" id="year-labels"></div>
+      </div>
+    </main>
+  </div>
+  
+  <div class="detail-panel" id="detail-panel">
+    <span class="close" onclick="closeDetail()">×</span>
+    <h3 id="detail-title">Embassy</h3>
+    <div id="detail-stats"></div>
+    <div class="mini-chart">
+      <div class="bar-chart" id="detail-chart" style="height: 50px;"></div>
+    </div>
+    <div class="subject-list">
+      <h4 style="font-size: 11px; color: #888; margin-bottom: 10px;">SAMPLE SUBJECTS</h4>
+      <div id="detail-subjects"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/3d-force-graph@1"></script>
+  <script>
+    let Graph;
+    let data = {};
+    let selectedEmbassy = null;
+    
+    async function init() {
+      // Load cablegate data
+      const embassyResponse = await fetch('cablegate_embassies.json');
+      const embassyData = await embassyResponse.json();
+      
+      const timelineResponse = await fetch('cablegate_timeline.json');
+      const timelineData = await timelineResponse.json();
+      
+      data = {
+        graph: embassyData,
+        timeline: timelineData
+      };
+      
+      // Update stats
+      document.getElementById('total-embassies').textContent = data.timeline.nodes.length;
+      document.getElementById('total-cables').textContent = data.timeline.total_cables.toLocaleString();
+      
+      // Render components
+      renderEmbassyList();
+      renderTimeline();
+      renderGraph();
+    }
+    
+    function renderEmbassyList() {
+      const container = document.getElementById('embassy-list');
+      const sorted = [...data.timeline.nodes].sort((a, b) => b.total - a.total);
+      
+      container.innerHTML = sorted.map(emb => `
+        <div class="embassy-item" onclick="selectEmbassy('${emb.id}')" id="emb-${emb.id}">
+          <span class="embassy-name">${emb.name}</span>
+          <span class="embassy-count">${emb.total.toLocaleString()}</span>
+        </div>
+      `).join('');
+    }
+    
+    function renderTimeline() {
+      const years = data.timeline.years;
+      const yearTotals = {};
+      
+      years.forEach(year => {
+        yearTotals[year] = 0;
+        data.timeline.nodes.forEach(emb => {
+          yearTotals[year] += emb.yearly[year] || 0;
+        });
+      });
+      
+      const maxVal = Math.max(...Object.values(yearTotals));
+      
+      const chartContainer = document.getElementById('timeline-chart');
+      chartContainer.innerHTML = years.map(year => {
+        const height = (yearTotals[year] / maxVal * 100);
+        return `
+          <div class="bar" style="height: ${height}%">
+            <div class="tooltip">${year}: ${yearTotals[year].toLocaleString()} cables</div>
+          </div>
+        `;
+      }).join('');
+      
+      const labelsContainer = document.getElementById('year-labels');
+      labelsContainer.innerHTML = years.filter((_, i) => i % 2 === 0)
+        .map(year => `<span>${year}</span>`).join('');
+    }
+    
+    function renderGraph() {
+      const container = document.getElementById('graph-container');
+      
+      Graph = ForceGraph3D()(container)
+        .graphData(data.graph)
+        .nodeLabel(node => `
+          <div style="background:rgba(0,0,0,0.9);padding:10px 15px;border-radius:8px;">
+            <strong style="color:#00ff88;font-size:14px;">${node.name}</strong><br>
+            <span style="color:#aaa;font-size:12px;">Connections: ${node.val?.toLocaleString() || 'N/A'}</span>
+          </div>
+        `)
+        .nodeColor(node => {
+          if (selectedEmbassy === node.id) return '#ffffff';
+          const val = node.val || 1;
+          if (val > 1000) return '#ff4444';
+          if (val > 500) return '#ffaa00';
+          return '#00ff88';
+        })
+        .nodeVal(node => Math.sqrt(node.val || 1) * 3)
+        .nodeOpacity(0.9)
+        .linkColor(link => {
+          const val = link.value || 1;
+          if (val > 100) return 'rgba(255,68,68,0.5)';
+          if (val > 50) return 'rgba(255,170,0,0.3)';
+          return 'rgba(68,255,136,0.15)';
+        })
+        .linkWidth(link => Math.sqrt(link.value || 1) * 0.4)
+        .linkDirectionalParticles(2)
+        .linkDirectionalParticleWidth(1.5)
+        .linkDirectionalParticleSpeed(0.004)
+        .backgroundColor('rgba(0,0,0,0)')
+        .onNodeClick(node => {
+          selectEmbassy(node.id);
+          
+          // Camera zoom
+          const distance = 180;
+          const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+          Graph.cameraPosition(
+            { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio },
+            node,
+            1000
+          );
+        });
+    }
+    
+    function selectEmbassy(id) {
+      selectedEmbassy = id;
+      
+      // Update list selection
+      document.querySelectorAll('.embassy-item').forEach(el => el.classList.remove('selected'));
+      const el = document.getElementById('emb-' + id);
+      if (el) el.classList.add('selected');
+      
+      // Update graph colors
+      if (Graph) {
+        Graph.nodeColor(node => {
+          if (node.id === id) return '#ffffff';
+          const val = node.val || 1;
+          if (val > 1000) return '#ff4444';
+          if (val > 500) return '#ffaa00';
+          return '#00ff88';
+        });
+      }
+      
+      // Show detail panel
+      const emb = data.timeline.nodes.find(n => n.id === id);
+      if (emb) {
+        document.getElementById('detail-title').textContent = emb.name;
+        document.getElementById('detail-stats').innerHTML = `
+          <div style="font-size: 24px; color: #00ff88; font-weight: bold;">${emb.total.toLocaleString()}</div>
+          <div style="font-size: 12px; color: #888;">Total Cables</div>
+        `;
+        
+        // Mini chart
+        const years = data.timeline.years;
+        const maxVal = Math.max(...years.map(y => emb.yearly[y] || 0));
+        document.getElementById('detail-chart').innerHTML = years.map(year => {
+          const val = emb.yearly[year] || 0;
+          const height = maxVal > 0 ? (val / maxVal * 100) : 0;
+          return `<div class="bar" style="height: ${height}%; background: linear-gradient(to top, #00ff88, #00aa55);"></div>`;
+        }).join('');
+        
+        // Subjects
+        document.getElementById('detail-subjects').innerHTML = 
+          (emb.subjects || []).slice(0, 5).map(s => 
+            `<div class="subject-item">${s}</div>`
+          ).join('') || '<div class="subject-item">No subjects available</div>';
+        
+        document.getElementById('detail-panel').style.display = 'block';
+      }
+    }
+    
+    function closeDetail() {
+      document.getElementById('detail-panel').style.display = 'none';
+      selectedEmbassy = null;
+      document.querySelectorAll('.embassy-item').forEach(el => el.classList.remove('selected'));
+      if (Graph) {
+        Graph.nodeColor(node => {
+          const val = node.val || 1;
+          if (val > 1000) return '#ff4444';
+          if (val > 500) return '#ffaa00';
+          return '#00ff88';
+        });
+      }
+    }
+    
+    // Search
+    document.getElementById('search').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      document.querySelectorAll('.embassy-item').forEach(el => {
+        const name = el.querySelector('.embassy-name').textContent.toLowerCase();
+        el.style.display = name.includes(query) ? 'flex' : 'none';
+      });
+    });
+    
+    // Initialize
+    init();
+  </script>
+</body>
+</html>
