@@ -18,19 +18,14 @@
       top: 20px;
       left: 20px;
       z-index: 100;
-      background: rgba(20, 20, 30, 0.9);
+      background: rgba(20, 20, 30, 0.95);
       padding: 20px;
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.1);
       max-width: 320px;
     }
     
-    .controls h1 {
-      font-size: 18px;
-      margin-bottom: 15px;
-      color: #00ff88;
-    }
-    
+    .controls h1 { font-size: 18px; margin-bottom: 15px; color: #00ff88; }
     .controls h2 {
       font-size: 14px;
       margin: 15px 0 10px;
@@ -39,11 +34,7 @@
       letter-spacing: 1px;
     }
     
-    .btn-group {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+    .btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
     
     .btn {
       padding: 8px 16px;
@@ -74,53 +65,60 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: rgba(20, 20, 30, 0.9);
-      padding: 15px 20px;
+      background: rgba(20, 20, 30, 0.95);
+      padding: 20px;
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.1);
-      max-width: 350px;
+      max-width: 400px;
+      max-height: 60vh;
+      overflow-y: auto;
       display: none;
     }
     
-    .info-panel h3 {
-      color: #00ff88;
-      margin-bottom: 8px;
-      font-size: 16px;
+    .info-panel h3 { color: #00ff88; margin-bottom: 10px; font-size: 16px; }
+    .info-panel p { font-size: 13px; color: #aaa; line-height: 1.6; margin-bottom: 15px; }
+    
+    .info-panel .close {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      cursor: pointer;
+      color: #666;
+      font-size: 20px;
     }
     
-    .info-panel p {
-      font-size: 13px;
-      color: #aaa;
-      line-height: 1.6;
+    .info-panel .close:hover { color: #fff; }
+    
+    .doc-link {
+      display: block;
+      padding: 12px;
+      background: rgba(0,255,136,0.1);
+      border-radius: 8px;
+      color: #00ff88;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+      border: 1px solid rgba(0,255,136,0.2);
     }
+    
+    .doc-link:hover { background: rgba(0,255,136,0.2); }
     
     .legend {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      background: rgba(20, 20, 30, 0.9);
+      background: rgba(20, 20, 30, 0.95);
       padding: 15px;
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.1);
       font-size: 12px;
     }
     
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 5px 0;
-    }
+    .legend-item { display: flex; align-items: center; gap: 8px; margin: 5px 0; }
+    .legend-color { width: 12px; height: 12px; border-radius: 50%; }
     
-    .legend-color {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-    
-    .search-box {
-      margin-top: 15px;
-    }
+    .search-box { margin-top: 15px; }
     
     .search-box input {
       width: 100%;
@@ -134,6 +132,20 @@
     
     .search-box input::placeholder { color: #666; }
     .search-box input:focus { outline: none; border-color: #00ff88; }
+    
+    .advanced-link {
+      display: block;
+      margin-top: 15px;
+      padding: 10px;
+      background: rgba(0,255,136,0.1);
+      border-radius: 6px;
+      color: #00ff88;
+      text-decoration: none;
+      text-align: center;
+      font-size: 12px;
+    }
+    
+    .advanced-link:hover { background: rgba(0,255,136,0.2); }
   </style>
 </head>
 <body>
@@ -144,7 +156,7 @@
     
     <h2>Dataset</h2>
     <div class="btn-group">
-      <button class="btn active" onclick="loadDataset('cablegate')">Cablegate Embassies</button>
+      <button class="btn active" onclick="loadDataset('cablegate')">Cablegate</button>
       <button class="btn" onclick="loadDataset('dnc')">DNC Emails</button>
     </div>
     
@@ -158,30 +170,27 @@
       <input type="text" id="search" placeholder="Search nodes..." oninput="searchNodes(this.value)">
     </div>
     
-    <div class="stats" id="stats">
-      Loading...
-    </div>
+    <div class="stats" id="stats">Loading...</div>
+    
+    <a href="advanced.html" class="advanced-link">📊 Open Advanced Cablegate Explorer →</a>
   </div>
   
   <div class="info-panel" id="info-panel">
+    <span class="close" onclick="closeInfo()">×</span>
     <h3 id="info-title">Node Info</h3>
     <p id="info-content"></p>
+    <a href="#" class="doc-link" id="doc-link" target="_blank">🔍 View Documents on WikiLeaks</a>
   </div>
   
-  <div class="legend" id="legend">
-    <strong>Connection Strength</strong>
-    <div class="legend-item"><div class="legend-color" style="background:#ff4444"></div> High</div>
-    <div class="legend-item"><div class="legend-color" style="background:#ffaa00"></div> Medium</div>
-    <div class="legend-item"><div class="legend-color" style="background:#44ff88"></div> Low</div>
-  </div>
+  <div class="legend" id="legend"></div>
 
   <script src="https://unpkg.com/3d-force-graph@1"></script>
   <script>
     let Graph;
     let currentDataset = 'cablegate';
     let graphData = {};
+    let detailedData = {};
     
-    // Color schemes
     const colors = {
       cablegate: {
         node: (node) => {
@@ -201,7 +210,7 @@
         node: (node) => {
           const name = node.name || '';
           if (name.includes('dnc')) return '#00aaff';
-          if (name.includes('politico') || name.includes('washpost')) return '#ff6600';
+          if (name.includes('politico') || name.includes('washpost') || name.includes('nbc')) return '#ff6600';
           return '#44ff88';
         },
         link: () => 'rgba(100,200,255,0.2)'
@@ -211,32 +220,41 @@
     async function loadDataset(name) {
       currentDataset = name;
       
-      // Update buttons
       document.querySelectorAll('.btn-group:first-of-type .btn').forEach(b => b.classList.remove('active'));
       event.target.classList.add('active');
       
-      const file = name === 'cablegate' ? 'cablegate_embassies.json' : 'dnc_graph.json';
-      
       try {
-        const response = await fetch(file);
-        graphData = await response.json();
-        
-        // Update stats
-        document.getElementById('stats').innerHTML = `
-          <div>Nodes: <span>${graphData.nodes.length}</span></div>
-          <div>Edges: <span>${graphData.links.length}</span></div>
-          <div>Dataset: <span>${name === 'cablegate' ? 'US Diplomatic Cables' : 'DNC Email Network'}</span></div>
-        `;
-        
-        // Update legend
         if (name === 'cablegate') {
+          const [graphRes, detailRes] = await Promise.all([
+            fetch('cablegate_embassies.json'),
+            fetch('cablegate_detailed.json')
+          ]);
+          graphData = await graphRes.json();
+          detailedData = await detailRes.json();
+          
+          document.getElementById('stats').innerHTML = `
+            <div>Nodes: <span>${graphData.nodes.length}</span> embassies</div>
+            <div>Edges: <span>${graphData.links.length}</span> connections</div>
+            <div>Total: <span>251,287</span> diplomatic cables</div>
+          `;
+          
           document.getElementById('legend').innerHTML = `
             <strong>Embassy Activity</strong>
-            <div class="legend-item"><div class="legend-color" style="background:#ff4444"></div> High (1000+ cables)</div>
+            <div class="legend-item"><div class="legend-color" style="background:#ff4444"></div> High (1000+ refs)</div>
             <div class="legend-item"><div class="legend-color" style="background:#ffaa00"></div> Medium (500+)</div>
             <div class="legend-item"><div class="legend-color" style="background:#44ff88"></div> Normal</div>
           `;
         } else {
+          const response = await fetch('dnc_graph.json');
+          graphData = await response.json();
+          detailedData = {};
+          
+          document.getElementById('stats').innerHTML = `
+            <div>Nodes: <span>${graphData.nodes.length}</span> email addresses</div>
+            <div>Edges: <span>${graphData.links.length}</span> connections</div>
+            <div>Dataset: <span>DNC Email Leak</span></div>
+          `;
+          
           document.getElementById('legend').innerHTML = `
             <strong>Email Domains</strong>
             <div class="legend-item"><div class="legend-color" style="background:#00aaff"></div> DNC Internal</div>
@@ -260,10 +278,13 @@
       
       Graph = ForceGraph3D()(container)
         .graphData(graphData)
-        .nodeLabel(node => `<div style="background:rgba(0,0,0,0.8);padding:8px 12px;border-radius:6px;font-size:13px;">
-          <strong style="color:#00ff88">${node.name || node.id}</strong>
-          ${node.val ? '<br>Connections: ' + node.val : ''}
-        </div>`)
+        .nodeLabel(node => `
+          <div style="background:rgba(0,0,0,0.9);padding:10px 15px;border-radius:8px;">
+            <strong style="color:#00ff88;font-size:14px;">${node.name || node.id}</strong>
+            ${node.val ? '<br><span style="color:#aaa">Connections: ' + node.val + '</span>' : ''}
+            <br><span style="color:#666;font-size:11px;">Click for documents</span>
+          </div>
+        `)
         .nodeColor(colorScheme.node)
         .nodeVal(node => Math.sqrt(node.val || 1) * 2)
         .nodeOpacity(0.9)
@@ -271,34 +292,9 @@
         .linkWidth(link => Math.sqrt(link.value || 1) * 0.3)
         .linkOpacity(0.6)
         .backgroundColor('#0a0a0a')
-        .onNodeClick(node => {
-          // Focus on node
-          const distance = 200;
-          const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
-          Graph.cameraPosition(
-            { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio },
-            node,
-            1000
-          );
-          
-          // Show info panel
-          const panel = document.getElementById('info-panel');
-          document.getElementById('info-title').textContent = node.name || node.id;
-          
-          const connections = graphData.links.filter(l => 
-            l.source.id === node.id || l.target.id === node.id ||
-            l.source === node.id || l.target === node.id
-          ).length;
-          
-          document.getElementById('info-content').textContent = 
-            `Connections: ${connections}${node.val ? ' | Activity Score: ' + node.val : ''}`;
-          panel.style.display = 'block';
-        })
-        .onBackgroundClick(() => {
-          document.getElementById('info-panel').style.display = 'none';
-        });
+        .onNodeClick(node => showNodeInfo(node))
+        .onBackgroundClick(() => closeInfo());
         
-      // Add particle animation on links for cablegate
       if (currentDataset === 'cablegate') {
         Graph
           .linkDirectionalParticles(2)
@@ -307,15 +303,70 @@
       }
     }
     
+    function showNodeInfo(node) {
+      const panel = document.getElementById('info-panel');
+      const title = document.getElementById('info-title');
+      const content = document.getElementById('info-content');
+      const docLink = document.getElementById('doc-link');
+      
+      // Zoom to node
+      const distance = 200;
+      const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+      Graph.cameraPosition(
+        { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio },
+        node,
+        1000
+      );
+      
+      if (currentDataset === 'cablegate') {
+        const detailed = detailedData.nodes?.find(n => n.id === node.id);
+        title.textContent = (node.name || node.id) + ' Embassy';
+        
+        const connections = graphData.links.filter(l => 
+          l.source === node.id || l.target === node.id ||
+          l.source.id === node.id || l.target.id === node.id
+        ).length;
+        
+        content.innerHTML = `
+          <strong>Total Cables:</strong> ${detailed?.total?.toLocaleString() || node.val || 'N/A'}<br>
+          <strong>Network Connections:</strong> ${connections} embassies<br>
+          ${detailed?.sample_cables?.length ? `<strong>Sample:</strong> ${detailed.sample_cables[0].subject?.substring(0, 100)}...` : ''}
+        `;
+        
+        docLink.href = detailed?.search_url || `https://wikileaks.org/plusd/?qproject[]=cg&qforigin[]=${node.id}#result`;
+        docLink.textContent = '🔍 Search All ' + (node.name || node.id) + ' Cables';
+      } else {
+        // DNC emails
+        const email = node.name || node.id;
+        title.textContent = email;
+        
+        const connections = graphData.links.filter(l => 
+          l.source === node.id || l.target === node.id ||
+          l.source.id === node.id || l.target.id === node.id
+        ).length;
+        
+        content.innerHTML = `
+          <strong>Email Connections:</strong> ${connections}<br>
+          <strong>Type:</strong> ${email.includes('dnc') ? 'DNC Internal' : email.includes('politico') || email.includes('washpost') ? 'Media' : 'External'}
+        `;
+        
+        // Search WikiLeaks DNC archive
+        const searchTerm = encodeURIComponent(email.split('@')[0]);
+        docLink.href = `https://wikileaks.org/dnc-emails/?q=${searchTerm}&mfrom=&mto=&title=&notitle=&date_from=&date_to=&nofrom=&noto=&count=50&sort=0#searchresult`;
+        docLink.textContent = '🔍 Search Emails on WikiLeaks';
+      }
+      
+      panel.style.display = 'block';
+    }
+    
+    function closeInfo() {
+      document.getElementById('info-panel').style.display = 'none';
+    }
+    
     function setViewMode(mode) {
       document.querySelectorAll('.btn-group:nth-of-type(2) .btn').forEach(b => b.classList.remove('active'));
       event.target.classList.add('active');
-      
-      if (mode === '2d') {
-        Graph.numDimensions(2);
-      } else {
-        Graph.numDimensions(3);
-      }
+      Graph.numDimensions(mode === '2d' ? 2 : 3);
     }
     
     function searchNodes(query) {
@@ -331,7 +382,6 @@
       });
     }
     
-    // Initialize
     loadDataset('cablegate');
   </script>
 </body>
